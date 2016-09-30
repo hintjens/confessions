@@ -1,0 +1,748 @@
+// kate: font Liberation Sans; font-size 16; syntax None; bom off; indent-mode none;
++ A Hundred Tiny Slices
+
+In which I wrote a "Top ten..." Buzzfeed-like article, and people seemed to like it, and asked for more. I stopped at the tenth article. Here they are.
+
+++ Ten Tips for Young Programmers
+
+Writing code is like doing magic. Just say the right words, and amazing stuff happens. Or, horrible things happen. Becoming a great programmer isn't easy. It takes time. For young coders, I'm going to give ten tips to help you along that path.
+
+1. Take Your Time
+
+It takes years to get good at coding, so be patient. Your first projects will be weak, no matter how smart you are. If you're coding every day you'll be decent after five years, and good after ten. And after twenty years you may become great.
+
+2. Write Code, Write Code
+
+There's a myth that superb coders are born. Yes, you need talent, yet above all you need practice. Code every spare minute. You need to practice for years, alone and with others. It won't make you rich, it will make you better. Coding is like playing music. Play the same tune a hundred times, and each time you will learn something new.
+
+3. Develop Your Strengths
+
+Discover what you are good at: everyone is different. Maybe it's problem solving. Maybe it's teaching others. Maybe it's long, deep focus on difficult concepts. The best sign you're good at something is you enjoy doing it. Over time you'll become better at other aspects of coding.
+
+4. Learn to Work With Others
+
+Alone, you'll always be mediocre. Only when you work with others can you really shine. Learn to let others compensate for your weaknesses. Look for teams that need you and that can challenge you. Join open source projects. Learn open source culture. Learn from others, and especially their mistakes.
+
+5. Use Science, not Magic
+
+Most of the software industry [http://hintjens.com/blog:81 is plain wrong]. Learn to recognize and reject magical arguments. Science is about solving real problems with wild, irresponsible answers, and harsh error correction. Don't follow fashion. Take the next most urgent problem. Write a minimal plausible solution. Test that, and keep it only if it seems to work.
+
+6. Trust Your Instincts
+
+We're born with good instincts for working with others. Education and work beat these out of us. Most of all we learn to accept discomfort and pain. Learn to trust your instincts. If something you're doing seems wrong, fix it. Even if it takes a decade: write it down, understand it, and fix it.
+
+7. Work With What You Have
+
+Work with the problems, tools, and people you have at hand. Focus on getting it right, minimal, and modest. Don't wait for tomorrow's technology to arrive. Don't try to invent the future. Just get to work making real solutions to real problems. The future will invent itself.
+
+8. Embrace Criticism
+
+Lose your ego. When someone criticizes your work it can hurt. Yet it's far worse to be ignored. Ask people for critiques. Make your work public and open source, when you can. Now and then you'll hit a troll who really tries to hurt you. It's never personal. Learn to shrug that off.
+
+9. Keep Your Costs Low
+
+Cheap is important. Learn to use Linux, and a cheap or second-hand PC. Learn the command line. Stick with small languages like C, instead of massive languages like C++. Learning a larger language does not make you a better programmer.
+
+10. Publish Your Work
+
+Put your code out there, using your real name. Become a contributor to open source projects. If they don't want you, find projects that do. Build up your public profile, e.g. on GitHub. It's your future resume.
+
+++ Ten Habits of a Good Programmer
+
+Good programmers are born and then made. You need talent and passion, and you need experience. I was lucky to learn from the best, and have lots of opportunity to practice. I'm going to summarize ten of the top habits I've always applied to my work. Cause or correlation? You tell me.
+
+1. If it works and is still useful, don't throw it out
+
+This means writing portable code, and making reusable pieces. Libraries, APIs, whatever it takes. Be your own client. Layer your work.
+
+2. Never solve the same problem twice in parallel
+
+This means making tools. Adopt the Unix philosophy: command-line tools that do one thing and do it well. Learn about pipes. While you're at it, use Linux (or a BSD) as your development box.
+
+3. Solve the same problem often in serial
+
+This means being willing to throw out your code and rewrite it when you find better solutions. If you work towards minimal APIs rather than features, this works better.
+
+4. Write code, and repeat, until you are fluent in your language
+
+Using a small language makes this easier. It takes years to become really fluent in a programming language.
+
+5. Learn to use code generators
+
+I've spoken of [https://github.com/imatix/gsl GSL] before. A general-purpose code generator is an essential tool for a serious programmer. There are a few options. Try them, choose one.
+
+6. Work with others
+
+Learn the techniques of collaboration. A good way is to contribute to an open source project. Or even better, start your own. Read Chapter 6 of [http://zguide.zeromq.org the ZeroMQ Guide]. It will enlighten.
+
+7. Technology is a tool, not a tribal affiliation
+
+Never turn pragmatic choice of tools into a belief system. I have written editors and code generators in COBOL 74. The language matters little.
+
+8. Aim for this cycle: learn, play, work, teach
+
+It is the fastest way to get better and deliver code that others can use and trust. Avoid this cycle: imagine, argue, agree, work. It is the fastest way to deliver junk.
+
+9. Get your edit-compile-run-fail cycles down to seconds
+
+If your language offers a REPL that's cool. If not, make a shell script that runs the loop for you. Your goal is that after every edit, your code self-tests and passes or fails. Use asserts or equivalent to challenge your own code.
+
+10. If you need debuggers, you're doing it wrong
+
+Make one change, test one change. Layer your code and write self-tests so that when it works, it always works. Use print statements. Aim towards APIs that are fully testable. Avoid language patterns that deliver fuzzy, unclear internal APIs.
+
+++ Ten Rules for Good Code
+
+It's one of my interview questions: "what is Good Code?" Surprisingly, almost no-one gets it right. It's not about speed, elegance, language, or style. //Good Code is code that solves real problems for real people, in an effective way.// Let me list the top 10 rules for writing good code.
+
+0. Use Git and Github
+
+I'm not going to dignify this with a non-zero number. If you aren't using git and github.com then you are already making excuses for doing it wrong. It is not about fashion or groupthink. Github (the company) know how to make Good Code, and their tools reflect this. Update: GitHub seems to be losing the plot, so this advice may get dated. Consider GitLab.
+
+1. Use Problem-driven Development
+
+Identify the next single smallest problem you want to fix. Write the simplest plausible solution, and test it. Your commit message states the problem, and then your solution. If there is a single change you make to how you code, please, this one. Don't make features. Solve problems.
+
+2. Make it Open Source
+
+Not eventually. Not when it's working. Not if you get management approval. Now, today, before it's finished. Before you even decide what you're making. Before your first commit, even. Open source means people, and that means voices to guide you to solving the //right// problems.
+
+3. Always Be Making APIs
+
+Write every piece of code as the body of an API. Read "Ten Rules for Good API Design". Be generous with new repositories. Layer your projects like you're making lasagna. Document your APIs, use them, publish them.
+
+4. Don't Document the Code
+
+Documenting code is like writing "Tasty!" on the side of a coffee cup. If the code isn't readable on a grey Monday morning before coffee, chuck it out and start again. What you document are APIs, so that can mean methods and classes. That is fine. Explaining what this funky loop does is not fine.
+
+5. Style for Readability
+
+You do need a style guide. And it must be strict. All that matters is readability. Collect patterns that work in your language. Document them, improve them, and make sure the //entire codebase conforms//. Do not use automatic reformatters, as they hide mischief. A good style is worth applying by hand.
+
+6. Better is the Enemy of the Good
+
+We already know this yet it's worth repeating. Do not optimize your code. Aim for "OK" and then stop. If you are following rule #1 then slow performance will pop up as a juicy problem somewhere down the line. It will always, //always//, be in a place you never thought of.
+
+7. Use Your Own Work
+
+It's shocking how many programmers don't use their own work. Then they have the arrogance to lecture users about "what they really need." Look, if I brew beer and make pizza, then I'm damn well going to sit at my table. Good Code is so delicious you can't resist it.
+
+8. Use Code Generators Carefully
+
+Code generation is powerful stuff. I'm speaking of industrial-scale [https://github.com/imatix/gsl tools like GSL].  If you don't use it, you're handicapping yourself. If you over-use it, you get insanity. Learn to look for the sweet spot where it's simple and obvious.
+
+9. Make Portable Code
+
+When you have to get into system internals, hide these behind abstract APIs. Your code should run on every box there is. If it doesn't, then invest in portability frameworks. This always pays off. Portable code is always simpler and cleaner than the weird stuff that thinks it's special because it does voodoo.
+
+10. Lie to Your Management
+
+Maybe you have an enlightened management that knows what "open allocation" means.  Or maybe they're going to be one of your main problems. When they demand schedules, deadlines, designs, and architectures, lie to them. If you cannot do this, find someone who can. It is easier to get forgiveness for success than permission.
+
+++ Ten Rules for Good API Design
+
+Every software developer uses APIs and most of us make them. The design of a "good" API is a black art. You know one when you see one. And yet how many of us could explain why some APIs are complex and hard to learn, while others are clean, simple, and a joy to use. It's a question I'll answer in this article, and provide ten rules for good API design.
+
+1. Make Only What You Need Today
+
+This is the top rule. Only solve problems you must solve, and make minimal answers to them. The temptation to solve tomorrow's problems is huge. Resist! Instead of trying to ship code in advance, focus on reducing your shipping cycles. If it takes you a few hours to ship answers to new questions, you can stop guessing what tomorrow's questions will be.
+
+2. Make the API modular
+
+Divide large problems into smaller ones, and solve each one separately. A modular API is easier to learn, and change over time. You can deprecate old modules with new ones. You can teach modules one by one. You can separate experimental pieces of the API from stable ones, from legacy pieces.
+
+3. Use Structured Syntax
+
+Use a structured syntax for the API: {{thing.action}} or {{thing.property}} instead of {{do_action_with_thing}}. The syntax naturally fits a modular approach, where each module is a class of things.
+
+4. Use Natural Semantics
+
+Invent no new concepts. Use only concepts the developer will already know, as the basis for your class system. If you find yourself having to explain a concept, you are doing it wrong. Either you're solving future problems, or you're structuring the API wrongly.
+
+5. Make the API Self-consistent
+
+Be rigorous in using the same style and conventions in every class. Consistency means when someone learns one class, they've learned them all. Document your conventions and make them a required standard for contributors.
+
+6. Make the API Extensible
+
+Easy extensibility has many benefits, not least it welcomes contributors. It also lets you delay implementing features, with "it's easy to add later if we need it." Every feature you do not add today is a win.
+
+7. Make it Fully Testable
+
+Every class and method must be fully testable by hostile code. Write your tests as you write code, and use the tests as documentation of the contracts that the API provides to the outside world. Run these tests every time the code changes. Do not worry about code coverage. What matters is the external contract. Consider using [http://hintjens.com/blog:85 contract lifecycles].
+
+8. Grow by Layering
+
+Keep your APIs focused and grow them over time by layering new APIs on top. Extensibility does not mean indefinite growth. Be explicit about the scope of the API, and enforce that scope.
+
+9. Keep it Simple to Use
+
+The ultimate test is how simple the API is to use. When you write an example, could your code look simpler? Are you forcing the user to specify options they don't care about? Are they taking extra steps that add no value? Be obsessive about reducing the visible surface area of your API.
+
+10. Keep it Portable
+
+Do not allow system concepts to leak into the API. Abstract them cleanly, with the intention: this API could run on any operating system. Your API must hide the implementation, though be careful about rule #4, and use natural abstractions.
+
+++ Ten Laws of the Physics of People
+
+When we make software, laws of physics apply. I call this the "physics of people." When we ignore these laws, our work collapses like a badly designed bridge. Maybe you didn't realize Einstein's Equivalency Principle applied to you? Then read on, and be enlightened...
+
+1. Newton's First Law of Motion
+
+//Everything we do has an economic motive.// Things only move as a result of energy coming from somewhere else. People and organizations also follow this law. Economic motive is a force. The more accurate the economic motive, the more accurate the direction of movement. If a factory produces 500,000 rubber boots because the CEO has a boot fetish, that's inaccurate. If it's responding to rising sea levels and demand, that's accurate.
+
+Lesson: give every team and individual access to accurate economic incentives.
+
+2. Newton's Second Law of Motion
+
+//The bigger the team, the more force it needs.// Sometimes it's a bike. Sometimes it's a car. The smaller the thing you want to move, the easier and faster it moves. If you try to change a 5,000 person company, you need massive force. To change a two person team takes a few beers and a single client.
+
+Lesson: smaller teams move faster than larger teams, given the same force.
+
+3. Newton's Third Law of Motion
+
+//When you push an organization, it pushes back.// Or, put this another way, if you try to change a 5,000 person company, you will be fired. Unless you're the CEO. Then you'll be given a huge bonus, and then fired.
+
+Lesson: build fresh organizations instead of changing existing ones.
+
+4. The Equivalency Principle
+
+//Falling is indistinguishable from making progress.// Until your face hits the pavement, you will believe you're in control. Since all movement is a reaction to an external force, you can only judge your success by aiming for the pavement, and failing.
+
+Lesson: the bigger your leaps, the more damaging your failures.
+
+5. Murphy's Law
+
+//If it can break, it will break.// In fact the full law adds, "//in the worst possible way, at the worst possible time.//" Failure isn't just all around us, it's inevitable. We cannot make perfect systems. Rather than trying to prevent failure, we need to learn to embrace failure, and make it part of our process.
+
+Lesson: embrace failure as the best way to learn what works.
+
+6. The Uncertainty Principle
+
+//The more you know about one topic, the stupider you become.// Or, as my mom used to tell me, "never trust someone who has all the answers, especially yourself." Experts are dangerous, if they are not balanced by naive laymen. Diversity is more valuable than expertise.
+
+Lesson: diversity is not a political slogan. It's the basis for collective intelligence.
+
+7. Zipf's Law of Power Distributions
+
+//20% of any system always has 80% of the power.// It applies to cities, languages, earthquakes, and economies. And organizations, and software systems. You'll spend most of your effort on a fraction of the software. Over-engineering code that isn't in the critical path is a waste of time.
+
+Lesson: if shitty code solves the problem, it's not shitty code.
+
+8. Moore's Law of Cost Gravity
+
+//Cool stuff gets 50% cheaper every 18-24 months.// Whether we like it or not, our software lives on an exploding cloud of silicon. Pavel Baron said, "architecture is dead." Even a single program behaves differently than its authors believe. This is why we need profilers, to optimize code. A system with many pieces is unknowable.
+
+Lesson: the size of our systems -- the number of moving pieces -- doubles every 18-24 months, and //no-one fully understands any system.//
+
+9. Amdahl's Law
+
+//The more you need consensus, the less work you can do.// If you spend one hour a day in meetings, that limits your effective team size to eight people. //At best.// In practice most of us spend a lot more time getting consensus before we can start working. Do you need approval to start on work? Do your team have standards for language and platforms? Do you have to wait for approval to put your patch into production? These are all wait states. The maximum effective size of most teams is probably less than five.
+
+Lesson: read about the [https://en.wikipedia.org/wiki/Actor_model Actor model], and become a message-driven, zero shared state Actor.
+
+10. Conway's Law
+
+//The software you make looks like your organization.// If you are in a shitty organization, you will make shitty software. To grow a large scale decentralized system (and nothing else survives these days) you grow a large scale decentralized organization. If your organization causes you pain, the software it makes will cause pain to its users.
+
+Lesson: if you're not happy in your job, build yourself a better job.
+
+++ Ten Rules for Open Source Success
+
+Everyone wants it, lots of people try it, yet doing it is mostly painful and irritating. I'm speaking about free software aka open source. Today I'm going to summarize 30 years of coding experience in ten management-proof bullet points.
+
+1. People Before Code
+
+This is the Golden Rule, taught to me by Isabel Drost-Fromm. Build community, not software. Without community your code will solve the wrong problems. It will be abandoned, ignored, and will die. Collect people and give them space to work together. Give them good challenges. Stop writing code yourself.
+
+2. Use a Share-Alike License
+
+Share-alike is the seat belt of open source. You can boast about how you don't need it, until you have a bad accident. Then you will either find your face smeared on the wall, or have light bruising. Don't become a smear. Use share-alike. If GPL/LGPL is too political for you, use MPLv2.
+
+3. Use an Zero-Consensus Process
+
+Seeking upfront consensus is like waiting for the ideal life partner. It is kind of crazy. Github killed upfront consensus with their fork/pull-request flow, so you've no excuse in 2015. Accept patches like Wikipedia accepts edits. Merge first, fix later, and discuss out of band. Do all work on master. Don't make people wait. You'll get consensus, after the fact.
+
+4. Problem, then Solution
+
+Educate yourself and others to focus on problems not features. Every patch must be a minimal solution to a solid problem. Embrace experiments and wild ideas. Help people to not blow up the lab. Collect good solutions and throw away the bad ones. Embrace failure, at all levels. It is a necessary part of the learning process.
+
+5. Contracts Before Internals
+
+Be aggressive about documenting contracts (APIs and protocols) and testing them. Use CI testing on all public contracts. Code coverage is irrelevant. Code documentation is irrelevant. All that matters is what contracts the code implements, and how well it does that.
+
+6. Promote From Within
+
+Promote contributors to maintainers, and maintainers to owners. Do this smoothly, easily, and without fear. Keep final authority to ban bad actors. Encourage people to start their own projects, especially to build on, or compete, with existing projects. Remove power from people who are not earning it on a daily basis.
+
+7. Write Down the Rules
+
+As you develop your rules, write them down so people can learn them. Actually, don't even bother. Just use [http://rfc.zeromq.org/spec:42 the C4 rules] we already designed for ZeroMQ, and simplify them if you want to.
+
+8. Enforce the Rules Fairly
+
+Use your power to enforce rules, not bully others into your "vision" of the project's direction. Above all, obey the rules yourself. Nothing is worse than a clique of maintainers who act special while blocking patches because "they don't like them." OK, that's exaggeration. Many things are much worse. Still, the clique thing will harm a project.
+
+9. Aim For the Cloud
+
+Aim for a cloud of small, independent, self-organizing, competing projects. Be intolerant of large projects. By "large" I mean a project that has more than 2-3 core minds working on it. Don't use fancy dependencies like submodules. Let people pick and choose the projects they want to put together. It's economics 101.
+
+10. Be Happy and Pleasant
+
+Maybe you noticed that "be innovative" isn't anywhere on my list. It's probably point 11 or 12. Anyhow, cultivate a positive and pleasant mood in your community. There are no stupid questions. There are no stupid people. There are a few bad actors, who mostly stay away when the rules are clear. And everyone else is valuable and welcome like a guest who has traveled far to see us.
+
+++ Ten Steps Towards Happiness
+
+Today, I'm going to explain ten simple steps you can take towards being happier, and making those around you happier. It takes no money and no magic. Just a shift in how you see the world, yourself, and others. As the 14th Dalai Lama said, "Happiness... comes from your own actions."
+
+1. Invest in your senses
+
+Your body and mind need a good diet. Make your own food, and make it tasty. Take photographs you find beautiful. Play music that excites you. Wear clothes that feel nice. Walk through the city at night, in the rain. Feel the texture of your life, with all your senses.
+
+2. Do things you are bad at
+
+Learning makes us feel alive. Challenge yourself, and keep proving you can learn. Learn to juggle, to hold your breath underwater for longer, to solve a Rubik's cube. Learn to play music and play for yourself. Learn to paint and draw.
+
+3. Enjoy other people
+
+Nothing makes us happier than other people. Take the time to talk to people you cross paths with. Be nice, chat, smile. If you live far from other people, move to be closer. If you drive a lot, change your life so you can walk and cycle. Go out and mingle.
+
+4. Be part of bigger things
+
+Being part of bigger things makes us feel valued. Find communities and projects to be part of. Start your own. It could be on-line or in the real world. Even the smallest contributions can make a difference to someone. Be precious to strangers.
+
+5. Finish your projects
+
+A sense of achievement gives us hope and confidence. Write down your life's accomplishments. Even small ones. Now keep this list up to date. Every year, think of what you've achieved. Finish your projects and move on to new ones.
+
+6. Get rid of bad actors
+
+Nothing can make us more miserable than other people. Read [http://hintjens.com/blog:_psychopaths "The Psychopath Code,"] and learn to recognize bad actors. When someone is a source of misery, remove them from your life. Whether it takes a day or a year, make this a project, and finish it.
+
+7. Ground your emotions
+
+To be happy you must deal with negative emotions. Learn to recognize these in yourself, and deal with them. Anger, self-pity, jealousy, fear, hate, loneliness... set them aside, and let happiness take their place. If you drink to relax, cut it out.
+
+8. Revalue your time
+
+Stop wasting your time on commuting, boring jobs, meetings, TV. Do only things that you feel are worthwhile, with people you like. If this means a cut in income, so be it. Be the person you really want to be. Don't take it all too seriously, we all die.
+
+9. Travel light
+
+Material possessions are more often a burden than a pleasure. Give away or sell anything you own that does not make you happy. Do not let your possessions define you. We live in a world of plenty. That means you can own less, not more.
+
+10. Want nothing, accept everything
+
+Above all, explore the world without desire or demand, and be tolerant of whatever happens. Most people are nice, and even the others teach us. When you want nothing, you cannot be disappointed. When you accept everything, you will see beauty in every moment.
+
+++ Ten Signs of a Psychopath
+
+One in 25 people is a (sub-clinical) psychopath. You may meet them at work, on dating sites, in the street. If psychopaths have one goal, it is to take from others and give nothing back. If they have one supreme talent, it is not getting caught. Everyone likes a psychopath. Until it gets personal, and then your life starts to bend. I'll list ten ways a psychopath (let's call him or her "Mallory") touches your life. If you recognize all of these, beware...
+
+1. He's really into you
+
+Mallory likes you and wants to hang out with you. A lot. He thinks you're special, interesting. You wonder why he's doing this. Did you suddenly become a lot more attractive? Yet it's flattering and makes you feel good about yourself. So you don't ask if he's too good to be true.
+
+2. He likes himself... a lot
+
+Mallory dresses well, works out, enjoys showing himself off. He spends a lot of time at the gym. He has nice sunglasses. He cares a lot about how he looks, and this is constant, no matter the occasion. He takes a lot of selfies and posts them online. You feel like he's talking to people you don't know.
+
+3. He leaves deep impressions
+
+It goes further than just fitting in. Mallory leaves a lasting impression in people. You will notice that people talk about him like he's a celebrity. He has some way of projecting his character that people adore. It makes you vaguely jealous.
+
+4. He is rude to unimportant people
+
+While he charms to your friends and relations, he is dry or even rude to people who are beneath him. For example in a restaurant he will not thank the staff who serve him. Unless he sees someone he likes, and then he is charming. You feel uneasy with his behavior.
+
+5. He asks you for small favors
+
+I call this "greasing," and it's a thing Mallory does to make you like him. He asks you for small innocent favors. Helping him move stuff. Advising him with something. Just keep him company. Every time you say "yes" you become easier to manipulate. You start to like him. It's called the [https://en.wikipedia.org/wiki/Ben_Franklin_effect Ben Franklin Effect.]
+
+6. He gets angry easily
+
+As you spend time with Mallory you'll have small, stupid arguments. He'll misunderstand something you said, and be angry with you. It will blow over, after //you// apologize. He never apologizes. This is another classic tactic to rope you into a "relationship" with him. You begin to feel anxious when you talk with him.
+
+7. He has no history
+
+He has no old friends you can speak to. He has lots of stories, yet nothing you can check on. If you google him, there is little except his self portraits. He has no professional track record. His past is blank and his present is unstable. This makes you curious. Yet he's open to everything. Think of the possibilities.
+
+8. He is super social
+
+He is fast to make friends with your family, colleagues, anyone who matters in your life. He does this with energy. Pretty soon everyone has accepted him and likes him. If you have any doubts about him, others will tell you he's OK. This soothes you.
+
+9. He needs things from you
+
+He doesn't hide that you can help him. He may even say, "only you can save me." It is never about money. Maybe he wants to save the world, and you can help that happen. Over time, his needs become your goals. He makes you feel like the most important person in the world.
+
+10. You start to change your life
+
+You begin to shift your priorities to suit Mallory. You begin to break old habits, and spend less time with people you usually hang out with. You feel energized and positive. Mallory promises you so many things!
+
+Does this describe someone in your life right now? Do you want to know what Mallory is really thinking, and planning? Do you want to learn how to break it off and get away? For more on psychopaths, read [http://thepsychopathcode.com "The Psychopath Code."] It's available on Kindle, in paperback, and as a free PDF.
+
+++ Ten Myths about Harassment
+
+Today I watched a revealing [https://www.youtube.com/watch?v=9IEFD_JVYd0 video of Yale students with a professor]. The mob insult and harangue someone with decades of experience defending free speech. It goes on far too long and leaves us disturbed. These young people act like a pampered, idiot mob. And yet you cannot deny their deep anger. Who is the harasser, and who the harassed, in this video?
+
++++  Comments are welcome
+
+I'm going to propose one answer at the end of article. First, [http://www.bullyonline.org/workbully/harass.htm a typical definition]: //"Harassment is any form of unwanted and unwelcome behaviour which may range from mildly unpleasant remarks to physical violence."// You should immediately see a problem: it is broad and subjective (violence apart). Next, let me suggest ten myths about harassment. These are claims or assumptions people often make when discussing harassment.
+
++++ The Myths
+
+1. Harassment equals discrimination
+
+Discrimination is prejudgment of individuals based on recognizable yet irrelevant criteria: ethnic origin, gender, religion, appearance, etc. It is often accompanied with harassment, used to implement discriminatory policies. Yet these are not the same. Much, even most harassment has no element of discrimination.
+
+2. Harassment is a gender/race issue
+
+This is the same myth, restated in terms of the feminist and "minority" struggles against discrimination. The danger with this myth is that it misses the bulk of harassment, misunderstands it, and ironically, makes it harder to fix. Worse, the myth splits us. We solve harassment together, not divided.
+
+3. Harassment is rare so it's irrelevant
+
+In fact slow, methodical harassment is widespread. It is often covert and indirect: violence against our time, space or belongings. Lies and distortion of events. Attacks on our reputation. Neglect of us and our environment. Intrusions into our privacy. We are so blunted by this that we shrug and dismiss harassment as inevitable.
+
+4. Harassment is an inevitable part of life
+
+While harassment is common, it is not inevitable. Many groups are free of it. Yet others are riven by it. I've seen both cases in my work with communities. It shows in people being broadly happy, or broadly miserable. Consider it a form of infectious disease that can hit any group, where the goal is 100% eradication. It takes science, knowledge, and patience to cure a disease.
+
+5. Harassment is obvious when you see it
+
+Since we've learned to unsee harassment, we assume it must be dramatically visible when it happens. In fact, most harassment is a chain of small, almost invisible acts spread out over time. The drama comes at times, yet it hides the far larger burden of costs. Looking for drama is counter-productive. We must instead look for damage.
+
+6. Anyone can be the harasser
+
+Like the best myths this is half-true. We're all capable of joining a mob, as in that video. Temporary power over others can be addictive: see how predatory that mob is. Yet most harassment is a long term, focused activity. Anyone with empathy is jolted when they realize they are hurting someone else. It can take a while for empathy to react. We can all make mistakes, yet most of us self-correct.
+
+7. Harassment is a motiveless act
+
+Harassment is driven by a hunger for power, unencumbered by empathy for others. It is the tool of a small slice of people who use it to capture victims, attack rivals, discredit critics, and divide opposition. Such people learn the techniques young, and practice them all their lives. They are almost invisible, except by the damage they do to others.
+
+8. Adults will police each other
+
+Sometimes this works, yet it is not reliable. People tend to accept the word of the most dominant, charismatic individual in a group or couple. Charming lies survive for years. Did you learn the tongue taste map at school? It is 100% bogus. If the harasser is assertive, they can turn a mob into their tool. Most of us are too polite, afraid, and timid to police others.
+
+9. Outlawing harassment will stop it
+
+There are those who follow rules and social mores. And there are those who disrespect others, and harass them when it suits. Bullying is banned in every civilized school, yet is widespread. Rules without fair and accurate enforcement is worse than no rules. Harassers are the first to exploit poor rules and weak authority.
+
+10. We don't need rules, we have manners
+
+Look at anti-harassment rules differently. They are not to tell the harasser what not to do. Rather, they are to tell the rest of us when to ask for help. Weak rules say, "Don't do A or B." Good rules say, "X and Y are not acceptable. If this happens to you, follow procedure Z."
+
++++ Conclusion
+
+I'm [http://lists.zeromq.org/pipermail/zeromq-dev/2014-October/027543.html a reluctant authoritarian], assuming everyone has the freedom to walk away from corrupt authorities. I've seen groups riven by harassment (like the FFII I was president of for two years), and groups almost entirely free of it (like the ZeroMQ community). The difference is not accidental.
+
+In my experience, the cure for harassment is a mix of a clear contract, impartial and neutral enforcement, education, and freedom. The most plausible punishment is exclusion (banishment), giving a perpetrator time and chance to self-correct, apologize, and prove their goodwill. Education means teaching people about the underlying models of harassment, to recognize distress in themselves and others, and to respond to it appropriately. Freedom means the ability to leave and form new groups, if authority is corrupt.
+
+In the video, I guess the harasser is one of the louder students attacking the professor. He or she is using the situation to build up power over their peer group, and over the faculty. They're using the professor as an easy common enemy, to create emotions. They already have a slice of the crowd as followers. Tomorrow, a bunch more. Their goal is to use the entire campus as a power base. It's practice. They'll graduate to business or politics.
+
+++ Ten Steps to Better Public Speaking
+
+Speaking to an audience can be difficult for many of us. For the audience, it can be painfully boring. Yet when done well, a talk becomes a magical moment. I've had a few of these, among a lot of disasters. I'm going to explain my strategy for becoming a better public speaker. Some people are more gifted than others. No matter: the key is not talent, it is patient effort in the right direction.
+
++++ Why It Matters
+
+Once in 2007 I organized a conference on software patents, called EUPACO-2. We had a brilliant set of international speakers. The two keynotes were shockingly good, and for me, set the bar for every keynote speech I've ever given.
+
+Mark Shuttleworth, dot-com billionaire and the first South African in space, told the story of the Internet revolution, and said a phrase I'll never forget: "//Old money hates new money, and tries to destroy it every chance it gets.//" His keynote inspired me to write on the digital revolution, and this fight between old and new money. That became [http://cultureandempire.com Culture & Empire].
+
+Our closing keynote, Bill Kovacic, was an ex-commissioner of the US Federal Trade Commissioner. He didn't use a microphone, and didn't need one. His voice boomed out over the audience. Two things he said, which are not in [http://www.eupaco.org/local--files/eupaco2/William%20Kovacic.pdf his slides], stood out. "//When Bush took office in 2000, every single anti-trust action in the USA stopped, dead.//" he said. And a little later, he explained why patent pools are so popular in large companies. "//Patents trump anti-trust law,//" he explained. "//When a group of CEOs get together to fix prices, that's a criminal offense and they will go to jail. But if they're cross-licensing patents, it's entirely legal!//"
+
+Such power in so few words.
+
+For me, this is the reason to attend a conference. It is to be kicked out of my inertia. It is to hear people with years or decades of experience lift the veil on mystery. It is to leave with words burnt into my mind, changing me, and pushing me to do things I'd never dare, otherwise.
+
+It is a tragedy to see brilliance turned into a robotic slide reader. Kovacic had slides, for sure, yet what I remember is his hammering voice, his words, and his deep passionate anger at a corrupt system.
+
+In technical conferences, the best track is often the corridor. I love the corridor, and the long fertile chats. Yet the corridor mostly doesn't discuss the talks. "Did you see so-and-so's talk? Did you like it?" is about as far as it goes. And then we're back to more interesting subjects.
+
+It's better than nothing. A good bubble conference like BuildStuff, bringing people from far away and locking them up with booze and food, for days, can be mind blowing. It is like going on a cruise with a hundred close friends. A few weak talks, or many weak talks, is still worthwhile, if it brings people together.
+
+Yet we can do better. I know we can do better and I think most of us who speak at technical conferences want to do better. Which brings me to this article and ten steps to better public speaking. I'm not going to pull my punches. It took me decades of public speaking to realize some of these techniques were even possible, let alone get good at them.
+
++++ The Tips
+
+1. Stop Using Slides
+
+//Slides are the training wheels of public speaking. They stop bad accidents that might scar you for life. Yet they are often the biggest barrier to improving your public speaking. Speaking without slides forces you to start learning the real skill of talking to, and not at, your audience.//
+
+Once in OSLO (NDC) I gave a talk on open source community building, and four people came. One was the sound engineer, one was an organizer checking on me, and two were there by accident. I [https://vimeo.com/68236487 gave the talk.] The slides were, I think, excellent. My best slides ever, perhaps. And my last.
+
+I've been giving public talks for a long time. Mostly they were the usual affair: twenty slides, five points each, weak delivery from behind a lectern. Good content, mediocre delivery, and a somewhat bored audience. And then sometimes, I'd give a brilliant, life-changing talk.
+
+In June 2005 I came to talk at a small press conference-slash-debate organized by the European Patent Office and the FFII, fighting on opposite sides of the software patent war. This was the Christmas Football Match, a small moment of peace between the hostile camps. The EPO brought their usual suspects: bogus Microsoft-funded startups, industry lobbyists, and regulators. The FFII brought small businessmen, and me.
+
+I asked to speak last. The two panels presented in turns. Each time the FFII's speakers were trying to show their slides, one of the organizers, from the EPO, kept adjusting the projector, playing with the audio and so on. It was not subtle.
+
+When it was my turn I switched off the projector and said, "I'm not going to use slides."
+
+My company had been fighting a software patent troll in the mobile app sector. I'd been talking with other mobile app firms to fight the troll. They all capitulated and paid. We refused, and the troll started attacking our clients. We had to shut down our platform. So I was motivated, and had good stories to tell.
+
+I told off the fake startups for lying to the audience. I told off the EPO guy for trying to sabotage the other speakers. I told the audience, "patents don't create jobs. Hard work by quiet people creates jobs. Patents are a tax, a tool for lawyers to extort and blackmail. Anyone who claims they need patents to write innovative software is a crook or a liar. We will fight this directive, and we will destroy it."
+
+I spoke for fifteen minutes, unrelenting and angry. "You think you can come into //our// world of software, and change the laws so you can claim and tax our hard work?" We did crush the software patent directive (thanks to the hard work of others), and the FFII later asked me to become its president.
+
+It was a lucky accident that day. Nothing to lose and enough anger to overcome my fear of talking without slides. For a decade that experience has been my benchmark and my goal. A lot has to come together to give a successful talk. No slides seems to be an essential starting point.
+
+Let me break it down further:
+
+* When you use slides, the audience watches the screen, not you. This reduces the strength of your communication. For instance your non-verbal body language is almost totally silent.
+
+* Slides turn the audience from "participants" to "consumers." Half their brain switches off. They can always catch up later. They open their laptops. They think about their work.
+
+* Slides interrupt your focus, as speaker. You switch from screen to audience and back. This switching is visible and makes the audience feel less important to you.
+
+* A presentation, no matter how good, is fixed. There is no way to improvise, no way to adapt your talk to the audience in real-time. And yet that is how the best talks happen.
+
+* Slides are an artificial device. We don't use them in real life, ever. No boy-met-girl story ever contained a 12 page presentation with bullet points. A successful sales pitch happens around food and drinks, not a meeting table.
+
+I can go on. Enough to say that polishing your training wheels does not make you a better cyclist.
+
+Let me quickly answer the common pro-slide arguments:
+
+* "I need them to remember my talk" - it's a question of practice, like cooking without recipes.
+
+* "They help the audience follow my talk" - if your talk doesn't make sense without slides, maybe you are fixing the wrong problem.
+
+* "They make it easier to remember my talk" - visual experiences are entertainment. Learning needs words and voice, work and argument.
+
+* "Organizers and audience demand them" - there are lots of conferences. Being a better speaker gives you more, not less choice.
+
+* "It gives people a chance to catch my talk, later" - this is what the videos are for. If your talk can truly be captured on slides, why even be present in person?
+
+* "I need a way to show data, source code, diagrams" - put them on line, and talk about issues that don't need such illustrations, rather than technical ones. Your talk will be far more interesting and useful.
+
+We're so used to the crutch of slides that we've built our rituals around it. We treat our slot as a chance to dump data on the audience. And the audience expects it, groomed by years of mind-numbing meetings. Stockholm syndrome, perhaps. The audience pretends to understand and remember, and the speakers pretend to believe them. "Great slides! Where can I download them?" We all feel it's bogus yet can't quite verbalize it.
+
+2. Remove the Barriers
+
+//When you talk to an audience, you must build trust rapidly. If you fail at this, everything you say will be rejected, no matter how plausible or well explained. Some audiences are more hostile than others. The majority will always be at least skeptical. The fastest way to build trust is to remove all props and barriers and show vulnerability.//
+
+Now we come to the deeper psychological reason for not using slides. It is about projection of power, the fixing of trust, and the opening of your audience's mind to your message.
+
+In my work I've often had to resolve conflicts. There are some simple ways to build trust in a difficult meeting. You start by asking for token gestures, "could you pass me the water, please?" Then you remove barriers. Instead of sitting across the table from a person, you sit right beside them. Not so close to make them uncomfortable, yet within stabbing distance, so to speak.
+
+Someone once described my speaking style as "vulnerable." This is indeed what I show, standing in front of the audience without any props to support me. And yet a show of vulnerability is not weakness. It is a claim of power. The other party either rebels, or accepts.
+
+As Mark Rendle said once, this is like patting a large dog on the head. The dog can bite your naked hand. Yet if it does not, then it accepts your dominance. It looks like a friendly gesture, to pat a dog, yet it is all about power.
+
+Slides are a prop. The moment you have something on the screen, you're not patting the dog's head, you're throwing it a stick. It is not the same thing at all. Watch an expert give a weak talk and you see this effect. The more they put on their slides, the less people believe them.
+
+What other props do we tend to use? Obviously, the lectern. Don't stand behind anything. Walk down to the front of the stage and come close to your audience. If you can, get off the stage and get even closer.
+
+How do you dress? Do your clothes make a statement? If so, they're a prop and working against you. I've learned to dress in plain, neutral colors. The less my clothes talk, the more the audience will accept my words.
+
+How do you speak? Are you using jargon, making clever in-jokes, and referring to important companies and people? All of these are props, and they make you look weak. Learn to speak plainly, and if you tell jokes, make them about yourself.
+
+Your own ego must disappear. The more you act or claim to be important, the less people trust you. The same goes for your technology or product. If you give a sales pitch, you are asking for rejection. Always talk from the audience's view. What problems do they encounter?
+
+And here again, why slides are so toxic. How do you know the audience's experience unless you ask them? I like to discover this in the corridor, before my talk. Even a few conversations can give me the key to a talk. It is essentially unscriptable.
+
+Don't use notes. I once had a last-minute panic, at a large event, and came on stage holding some small pieces of paper. The room was huge and filled, and instead of connecting to the audience, I connected with my hand. It was [http://www.infoq.com/presentations/protocol-design-2015 not a good talk].
+
+3. Challenge Your Audience
+
+//Everyone is an expert in their own experience. Your best value as speaker is to ask the right questions, not provide the answers. As a layperson you can challenge an expert crowd. The best material you have is the data of your own experience. The best moments are entirely improvised, not rehearsed.//
+
+We come to the deeper question of how we //think individually, and in a group//. There is zero benefit in an exposition of existing finished material. "Here, I will now read the Wikipedia page on apple juice." Or worse, a corrupted version of that. "A fifty minute reading of my version of the Wikipedia page on apple juice." I call this Robot Reader Syndrome.
+
+You must know the problems you're talking about in depth. This means collecting data from your daily experience, and using it to develop new crazy theories and models. It is just the scientific process: take real problems, develop wild answers, and get others to catch your errors. To present a finished product, with no space for negotiation or falsification, sterilizes the collective thinking process.
+
+Let me give you an example. I've often seen conflict in open source communities. That's my data, and no-one can argue with it. Now I'll develop wild theories about where this conflict comes from, and how to solve it. That's my work. Then I present these wild theories to audiences who I hope have experienced the same problems. I wait, breathlessly, for them to tell me where I'm wrong. //Please tell me where my models are broken, so I can improve them.//
+
+There are many ways to work on your material. Observe your own organizations and projects. Write, write, write. Talk with others, at meetups and in the corridors at conferences. Always, step away from selling an answer, and focus on identifying the real problems and challenges. While a Robot Reader is bad, a Robot Salesperson is worse.
+
+If you are a good communicator, you can do this without even knowing the subject. It's how good consultants work. They enter a troubled organization. They ask staff, "what are the biggest problems?" They then ask others, "what are the best answers?" They write this down in a report, and charge a fat fee.
+
+When you know your problems, you can learn to improvise around them, with time and practice. Don't give the talk people expect. Give the talk they need. Surprise your audience. I've done this a few times: propose one topic, then switch to a different one at the last minute. People mostly like that.
+
+You may be tempted, as a speaker, to prepare a talk and then give the same talk several times. I've seen the same brilliant, interesting speakers give the same talk over months, even years. Part of this is the reliance on slides, again, which creates that sunk costs fallacy. "I've spent so long perfecting these slides that I might as well use them again." Part is the inability to improvise. Part is that culture of //ex-cathedra// monologues, the speeches and lectures.
+
+Don't be that person who thinks or claims they're smarter than the room. No-one ever is. The only way to truly shine, in a roomful of people, is to be part of that room.
+
+4. Learn the Technical Skills
+
+//Public speaking demands a set of technical skills. Some of us are naturally talented speakers. The rest of us can learn these skills with guidance and practice. This is a solved problem. One good solution: find your local Toastmasters club, and work through the program.//
+
+We are mostly better at walking than running. Yet almost anyone can complete a marathon, with practice and determination. We are mostly much better at talking to individuals than a group, yet anyone can learn to talk to a large audience.
+
+There are a number of aspects to learn:
+
+* How to speak clearly and slowly, without, uhm, filler noises. The most effective and brutal way is to record yourself speaking a text. Play it back, and note the problems. Too fast, too quiet, dropping sounds, hesitating, and so on. If you can't hear your own errors, get someone to help. As a general rule, speak more slowly, be more precise about the sounds, and lower your timbre.
+
+* How to lose or shift your accent. Some accents are barriers, some are attractively vulnerable. It depends on the culture. In general, the more neutral you can sound with respect to your audience, the better. This can mean adopting the accent of your audience, or a neutral international accent.
+
+* How to structure a talk. There are classic structures you can learn and use, e.g. introduction, three points, and conclusion. Or, take a classic story plot like [https://en.wikipedia.org/wiki/The_Seven_Basic_Plots#The_Seven_Basic_Plots overcoming a monster], a common theme in the software industry. My preference is for less structure and more dialog, which we'll come to later.
+
+* How to time yourself. This is an essential basic skill. You must at the least offer the audience time for questions. It is a rude and inconsiderate speaker who takes all their time reading their slides, and then starts to break the schedule by continuing to talk. The conference should cut speakers off if needed, yet for me, self-timing is as important as not mumbling. Start by learning to talk for exactly five minutes. Then work up over years until you can structure a 50-minute talk on the fly.
+
+* How to use your body language. This means stepping away from the lectern, and standing in front of your audience. It can be terrifying. Nonetheless, so is driving a car the first time. Good body language for talking is relaxed, open, and vulnerable. For example, arms open and using your hands, yet never raising your hands above your shoulders, nor making aggressive gestures.
+
+* How to connect visually with your audience. Again, removing barriers is a first step. You cannot connect when you are reading your laptop screen. Then, speaking //to// specific people in the crowd. Speak to people close to you but not at the front. At the end of every phrase, switch to someone else, so you scan the room. If the room permits it, come down to the audience and literally talk to them. All the time, stay relaxed and smiling.
+
+5. Learn from Failure
+
+//You will always learn more from your failures than your successes. This means always pushing yourself out of your safe zone, and then using your stumbles to become a better speaker.//
+
+It can be intensely painful, humiliating, and discouraging to give a bad talk. When you aim for perfection and you set your standards high, you will fail (by your own measure) more often. The good part is that your worst talks will still be better than average.
+
+For me, for example, a talk is a failure if I don't get more questions than I can answer in the time. My goal as speaker is to motivate people to do further research. So a cold room (or an empty one) is data that I did something wrong.
+
+To avoid traumatic disaster, start with short talks in forgiving environments. Build up your confidence and skills over time. After every talk, do this:
+
+* Get one or two points for improvement from someone in the audience whom you trust. "It was great," is not a help. "You spoke too rapidly," is helpful.
+
+* Get someone to record you, and watch yourself on video. It can be unpleasant to watch yourself speak yet you need to do this to see yourself improve. It can often take months for conferences to publish videos, so don't depend on that.
+
+Experiment with different formats so you build up your range. If you don't find events that offer you what you want, organize your own. For example, one of my favorite formats is a multi-day workshop, which I organize myself.
+
+Watch other talks and identify what doesn't work for you. Be honest about your irritation and then ask whether you cause the same feeling when you talk.
+
+When you do have a bad talk, use this as material. It makes a great opening, and I've done this. "Anyone here from Oslo? Yes? Well, I hate Oslo. Nothing personal, but last time I spoke there exactly four people came to my talk, and two of those had come to the wrong room."
+
+Of course, it's never Oslo's fault. As speaker, you did something wrong, and you can fix that, and make it better next time. (My main lesson from Oslo was that the talk title makes all the difference.)
+
+6. Maintain Protocol
+
+//Public speaking is an old art with a well-defined protocol. If a conference doesn't maintain protocol, organize it yourself.//
+
+I'm shocked by how few conferences know and maintain protocol. It's not complex, yet it does make a real difference. Here is how it tends to work:
+
+* Speaker fiddles with laptop, while audience comes into room.
+* After some extended silence, speaker asks, "everyone ready?" and starts talking.
+* When speaker is done, audience applauds and walks out of room.
+
+Here is how it should happen:
+
+* The Master of Ceremonies (MC) stands on stage, watching the audience as they take their places.
+
+* MC encourages audience to move closer, asks, "everyone ready?" and waits for an answer.
+
+* MC welcomes the audience and thanks them for coming. He then introduces the speaker by name, and cites some of their accomplishments.
+
+* MC asks the audience for a warm hand of applause, and welcomes the speaker up on stage.
+
+* MC passes the mike, shakes hands with the speaker, and walks off.
+
+* When the talk is over, MC asks the room to applaud, while speaker takes a bow (or looks bashful), and then MC takes back the mike.
+
+This protocol isn't just decoration. It creates trust between speaker and audience, and it provides a fail safe in case the microphone isn't working (it's the MC who suffers, not the speaker). It is less stressful for the speaker. A good MC can save a flailing speaker from disaster, by intervening if the room is too cold to ask questions. And an MC can be a natural timekeeper, intervening when a speaker talks too long or bores the audience with endless slides.
+
+If you organize a conference, please have an MC on every stage. If you are a speaker without such support, get another speaker to be your MC.
+
+7. Build a Dialogue
+
+//Personally, both in the audience and on stage, I want a dialog. I want to be able to interrupt and challenge the speaker, and as speaker, I want the audience to do this. It is not about argument: it is about thinking together.//
+
+As speaker, you face Newton's First Law of Thermodynamics: people will sit quiet and not talk unless they feel provoked. So creating a dialog requires some planning and effort.
+
+Start with the talk title. My best ever title was click-bait, "One Weird Trick for Making Perfect Software". I asked the organizer, is this acceptable, and she laughed, and told me it was great. And it was. A good title attracts and annoys, fifty-fifty. It fills the room with people who already want to argue with you.
+
+Next, take control of the room. There are many ways to do this. It depends on the room, the audience, the culture, the time of your talk, and how much beer you had the night before. Here are some of my techniques:
+
+* Watch the audience and make them wait, just a little too long, until there is total silence. This works in a larger room.
+
+* Ask everyone to stand up and wait until literally the entire room is standing. Then ask them to sit again. I like to do this when I see people with open laptops.
+
+* Ask everyone to stand up, and shake the hand of the person behind them. I've tried this twice in large rooms. One time the whole audience broke out in laughter. The second time, not a smile.
+
+* Tell a self-deprecating joke about yourself. When you can get a room to laugh, you have taken control, as every comic knows.
+
+* Start the talk by asking a simple yet difficult question, then give a reward to the person who answers correctly. I bring along copies of my books for this. It focuses attention and wakes everyone up.
+
+* Thank the organizers again, and ask the audience to applaud. It's cheesy, yet it works.
+
+When you've taken control of the room, you can start to talk seriously. You must anchor your talk in the experience of your audience. Again, I like to ask questions that show how common a problem is, or how rare a good answer is.
+
+With large audiences (over 1,000) it can be helpful to bring someone on stage as your foil. If you follow my advice about having an MC, you have your foil. What the foil does is challenge you, in name of the audience. It is hard to chat with thousands of people, so the foil substitutes for the crowd.
+
+I've also used a Twitter feed for questions, and that can work nicely. There is the danger of breaking the connection to your audience, as you read the tweets. The conference where I used that technique had arranged large screens at floor level, aiming up at the speaker, which was incredibly useful.
+
+Every room is different, so you must spend time in the room and watch other talks in that same space if you can. In small rooms you don't need to pass microphones around. In larger rooms, you must. Or, you must repeat the question for the camera and rest of the room.
+
+You can also change the layout of the room, in some cases. I've done this successfully in smaller events, where the seats started out in classic lines facing the stage, like a school class room. Ten minutes of moving stuff around, and we had a nice circle of sofas and chairs, almost like a campfire.
+
+There are some terrible rooms: huge flat rectangles designed to hold a thousand people all sleeping at the same time. In such rooms, bully the organizers into switching off all video, then move left and right on the stage so you can speak to most of the crowd. You may also kick off by asking people to move into the center, if the room is not full.
+
+I like to poll for questions about half way through the time, and then drive the talk by answering questions. When this works, it is great. When it fails, it's dramatic. Recently there were no questions and so I simply stopped the talk early: the audience (like me) was exhausted from the party the evening before. Having an MC on stage is a good backup: I learned my lesson there, again.
+
+Answering questions well takes skill at improvising. You don't actually need to answer the question. Rather, it can be an excuse for exploring another interesting topic. The best questions are a direct challenge to the ideas you are talking about.
+
+8. Keep It Simple
+
+//This is perhaps the hardest skill of all: to explore one idea in depth rather than touch the surface of a hundred different ideas. Yet it is the difference between garbage and gold. Every piece of your talk should be carrying your story forwards, not telling other random stories.//
+
+There are logical (yet false) reasons why speakers try to cover way too much. They feel they have to fill their speaking slot (rather than give the audience time to think and argue). They still use slides, so work backwards from the time: "in one hour, I can convey ten big ideas." They suffer from the "ten slides good, twenty slides better" type of false reasoning (it works better as "ten slides bad, twenty slides worse.")
+
+I think public speaking is like writing, carpentry, cooking, or music. You add value by making your product simpler and easier to digest, not by adding more. Any fool can make complexity. Simplicity is the real challenge.
+
+The core of your talk should be an idea or argument or model that is rare, controversial, and valuable enough to justify the moment. It should be worth the time the audience takes to travel, and the cost to you and the organizers to be there. Above all, you should be answering real questions the audience is facing now or will face soon.
+
+You can then explain and describe your model from many angles. These are not different stories. They are the same story, told in more and more detail. Each explanation gives the audience another perspective, and if you are doing your job well, they start to see the whole picture.
+
+Do not expect people to understand a complex new idea in a single sitting. That is not how it works. All you can do is break the ice of skepticism and plant a tiny seed. If conditions are right, the seed will grow and many months or years later, come to fruit.
+
+If you are challenging established culture, or authority, or habits, you will face resistance. The more investment in out-of-date models, the more resistance to change. Imagine this as wind. The simpler your idea and the more focused your presentation of it, the smaller your wind profile. And so, the lower the resistance.
+
+9. Keep the Discussion Going
+
+//Your work starts long before you give a talk, and ends long after. Subtle and deep truths can take years to hit home. And your own thinking will evolve and deepen over time. So you help yourself, and your audience, by keeping the discussion going over months and years.//
+
+I use various techniques for this. Obviously, there's this blog and my books, which act as shorthands. Instead of repeating myself, I can refer to an existing chain of argument.
+
+This article, for instance, came from a corridor discussion (well, more of a beer and rock music discussion) with Dylan Beattie. Perhaps in the future it would make a subject for a talk, in its own right. When you can, connect the past with the future like this. It just takes the habit of writing short pieces regularly.
+
+However, articles are opinion. Facts are more compelling. So a key part of the long term discussion is code and formal documents such as RFCs. These are not truth, yet they are easily falsifiable. If no-one uses a particular piece of code, or a given contract, you can assume they are inaccurate or irrelevant.
+
+I also like to collect my videos, as it gives people a view that stretches over years. It is also about self-promotion, something you must do as a speaker. People need to want to come to my talks. Empty rooms are no fun for anyone.
+
+Self-promotion sounds negative, yet it's essential. Partly you need to build and understand your own success, to be a better speaker. This is to deal with imposter syndrome, which I'll explain in the next section. Partly, you need access to interesting conferences, and that means gaining a reputation and a following.
+
+My advice is to build your reputation by your work, no more or less. The world cares about results, not ideas or vision, or even history. Don't tell us who you worked for, who your best friends are. Tell us what you made and give us a link so we can check it out.
+
+If you are, like me, in the software business, //invest in open source//. It is the number one way to build your knowledge, and reputation. Your Github profile is your CV. This is mostly true today and it is almost entirely true tomorrow. Show me a solid history of work and I trust what you say. Show me a blank page, and I'm going to start questioning your motives.
+
+Once you drink the github koolaid, you can use it for everything. Put your talks there, and accept pull requests. Put all your writing there, and accept pull requests! Use it for your blog (and accept pull requests).
+
+10. Manage Your Emotions
+
+//Lastly, and hardest for many of us, is dealing with the fear and anxiety of speaking to a crowd of strangers. Many of us don't feel competent, or confident enough. We are afraid of saying the wrong things, of looking foolish, and of being rejected. Yet there are ways to overcome all these emotions.//
+
+The fear of performing is called "imposter syndrome." It affects many speakers, as it affects many people who put themselves in front of an audience. The feeling is one of, "I don't deserve to be here," and it can be crippling. It is worse for anyone who suspects they were invited for reasons other than their skills and experience. It is often worse for women than for men.
+
+All our emotions can be tamed, it is a matter of technique and practice. I've written about this [http://hintjens.com/blog:81#toc12 on my blog] and in my book [http://hintjens.com/blog:_psychopaths The Psychopath Code]. This also applies to imposter syndrome, which is essentially the fear of exposure as a fraud, and rejection.
+
+The fear is based on a chain of subconscious assumptions. One, that we're not really good, just lucky. Two, that we will stumble, and reveal our incompetence. Three, that people will react by rejecting us in horror.
+
+Let's tackle competence first. This is, I feel, a symptom of society placing too much burden on the individual to be special, and different. Accept that we're all ants, little pieces of a complex system that works astoundingly well. Sure, we can flicker with individual brilliance now and then. It means little. Our superpower comes from working together. Simply by existing, you add value.
+
+Next, fear of failure and exposure. This is a symptom of culture asking us to be perfect. I've said, embrace your mistakes and learn from them. Fail with happiness and grace, recover, and continue. When there is nothing to hide, there is nothing to expose.
+
+Last, fear of rejection. There's a small mantra you can repeat to yourself. It's our vulnerabilities that make us attractive to others, not our strengths. We reject people who are difficult to work with because they are anti-social, arrogant, and deceptive. Such people never feel imposter syndrome. The simple fact you're afraid to fail makes you precious to others.
+
+Here are other techniques I recommend to fix imposter syndrome:
+
+* Remove the barriers between you and the audience. It feels more scary at first and then you realize that the less you try to hide, the less fear you have of exposure.
+
+* Treat failure as science. It is better to try ten things, and see eight fail, than to try just one and hope it works. For me, this means starting lots of projects, writing lots of articles, and speaking at lots of talks. Many are failures. The ones that survive are my successes.
+
+* Before the audience comes into the room, go onto the stage, and walk around. Tell yourself, "this is my stage, this is my place, and the audience are my guests and friends."
+
+* When you talk, never lie, bluff, or make claims you can't back up. When you don't know something, just say, "I don't know." There are people who are professional liars: you're not one of them.
+
+* Stay busy. If you have a talk coming up, write an article about the topic. Keep researching it, and try out different story lines on people.
+
+* Trust yourself. You are the child of a billion generations of survivors. Good luck has nothing to do with it. You have winning genes backed up by hard work.
+
++++ Conclusions
+
+If you're passionate about your work, then sooner or later you will want to share that passion with others. There are many reasons to want to become a good public speaker. Perhaps the main one is simply to get out into the world and meet interesting people. For me, it is a way to learn from others, and shake up my ideas in a way that's impossible working alone.
+
+I've explained my best techniques for capturing an audience's attention, and getting them to consider your ideas seriously. It is not easy. The typical conference attendee remembers only 9% of what they hear, by the end of the week, and a month later that figure is down to 0.1%. OK, I'm making this up, yet you get my point.
+
+Stop using slides, get closer to your audience, and challenge them. Engage them in dialog, and make them think. Keep your voice and body focused on the room. Use no props, gimmicks, or notes. Leave your fear off-stage, and if a talk bombs, accept that with grace.
+
+It is a slow, long process, so be patient and always kind to the organizers and staff.

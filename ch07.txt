@@ -1,0 +1,78 @@
+// kate: font Liberation Sans; font-size 16; syntax None; bom off; indent-mode none;
++ Living, In Limbo
+
+I've written a lot in my life. This is perhaps the most difficult piece I've ever done. In April, with a diagnosis of terminal cancer, I prepared to die. It's now July, and I'm still not dead. Instead, I'm in an in-between state, neither healthy nor obviously sick. Limbo is a strange land.
+
+++ The Undead
+
+"Is he getting better, or is he dying?" asked my nephew of me. How to explain? The hospital sent me home three months ago with boxes of pain killers, oxygen, a medical bed, and home care. Palliative care: aim for quality of life, not return to normal. And yet here I am, not on oxygen, not taking the pain killers, and seeing medical staff only when it's time for my biweekly chemotherapy.
+
+I'm clearly not dying yet. And still, slowly losing weight and muscle. A simple walk leaves me tired and needing to sit. I wake up, make an early morning cup of chicory/coffee, drink it, then lie down again, hit by the simple effort of standing up.
+
+We did a CAT scan a few weeks ago. Inconclusive. Things don't seem worse. Yet the numerous little blobs of cancer are still there in my lungs, patient. Another scan in a month, and we'll have a better idea.
+
+At least my horizons have grown. When I wrote [http://hintjens.com/blog:115 "A Protocol for Dying"] I was convinced that only a month or two remained. We had our wake-slash-party at the start of June, and I was there, not in a coffin, but sitting up alive and well. And playing a little with the musicians, even.
+
+Months, then. Maybe even a year, if we see the chemo is holding down the cancer. A year. It is immeasurable. I don't hope, just observe.
+
+My daughter asked me, "can we go camping this year?" The kids and me, loading up the car and driving off to far places. It became a tradition. We're a gang, well-organized and self-sufficient, as long as we're within reach of a Lidl or Aldi.
+
+Camping. Mostly we do the Atlantic coast of France, the islands d'Oleron and Re, Piccardie. Last year, the maritime Alps, in between Gap and Aix. Perched high on a hillside, we survived wind and rain when it came, and basked in the sun when it shone.
+
+Putting up a tent seems an insane proposition, when I can barely climb stairs without losing my breath. So I called our mountain side campsite and the owners cheerfully suggested a bungalow with handicapped access. Ah, wonderful.
+
+I asked my oncologist. Is it insane to skip a round of chemo and drive two days to southern France with the kids? "Great idea!" she said. "You must aim for quality of life!" No risks? I double checked. "You'll be fine," she said, "just enjoy yourselves."
+
+It's on a mountain side, this campsite. Sometimes I think I've gone crazy.
+
+++ The Chemotherapy
+
+Half the reason it's so hard to judge my health is the chemo. I'd wanted to write, "meh, chemo is OK, nothing to be worried about." That's what I wanted to say. A lot of people who have cancer are afraid of chemo. It's got a reputation for messing you up.
+
+The chemo messes me up. It doesn't make me bald, which is one consolation. Rather, there is a solid week of raw fatigue, vomiting, and distaste. Chemo day is Wednesday and it takes me until the next Tuesday to get over it. There are no drugs that help. Just sleep and time.
+
+Yet if I'm writing this, it's because the chemo is doing something positive. That, or my immune system has suddenly kicked into hero mode. I should be dead. I'm not.
+
+Lesson is: take your medicine. It may hurt, yet the alternative will hurt more.
+
+I trust my oncologist with my life. Rather, I trust the medical machine, representing science. Live or die, my case forms part of that machine, data of succcess or failure. Can we treat bile duct cancer with Folfox, a combination of drugs developed for colon cancer? "Treat" is relative. If the chances of survival go from 5% to 10%, that's a big success.
+
+++ The Party
+
+When my Czech and Slovak friends drove up with a car filled with beer and meat, I knew this was going to be a unique weekend. On Saturday we had a meetup for our ZeroMQ community, which grew as the beer flowed, the barbecue sizzled, and more and more people turned up.
+
+On Sunday around a hundred people came, all precious friends and family. The tables creaked with food. Three barbecues worked, all afternoon. We ate, talked, drank.
+
+A group of musicians turned up and began to set up on the stage. Then a dancer put on a tape and started teaching moves to the crowd. Soon we had a dance class going. More musicians turned up. They started to play, and it was excellent. I didn't realize we had several gifted musicians in the audience as well. The jam started. Guitar and lyre.
+
+The amazing thing about this weekend was how smoothly everything went. Every problem had someone in charge of it. The beer stayed cold, the barbecues sizzled, the music played.
+
+I've given many, many parties in my building, which is graced with a large space designed for this. There are a lot of things that can go wrong, from power failures to full on fights. I've had to chase out thieves and drunks, call the police a few times, apologize to the neighbors for the noise, broken bottles, and worse.
+
+None of this happened. Instead, we finished at a decent hour, and the last people there cleaned the place up.
+
+This was a classy party, with people I'm proud to consider my friends and to welcome into my home. Best party ever!
+
+++ The Writing
+
+You'd think that I'm in the ideal position to write. Lots of time, mostly at home, no long term plans. And yet it has been hard. It's taken me a month to start on this article. In limbo, it is so much easier to just switch off, become passive. It doesn't matter anyhow, does it. Just that constant prodding from my friends: "Pieter, how are you doing? What's your status?" And it's easier, eventually, to explain properly, than to answer in drips.
+
+It is a challenge, this situation. Today is a good day, yet I wake up choking, coughing to clear my lungs. A voice tells me, Pieter, it's not getting better. And then another voice comforts, hey hey, the pain in your shoulder has gone. You're not in pain. You are eating. This is awesome!
+
+There's this book, Scalable C, which I want to work on. It sits there, accusing me. "You promised!" it complains. I know, I know, I reply. Then back to Hacker News and Reddit. Is it the chemo, that's changed me? Or is this what it's like, in Limbo? I can't tell.
+
+++ The World in Limbo
+
+2016 is turning out to be a strange year for many people. Watching the Orlando shooting, the bombing in Istanbul, the attacks in Dhaka, the US elections, and the British dipping their feet into the sea of madness, I can't help but see patterns.
+
+Seems to me, all these events follow the same underlying pattern. You can decode it from basic principles. We see mass pain and suffering, exploited or provoked by a few individuals. Sometimes there is a long term goal: political power, often. Sometimes it's nothing more than "taste blood before I die."
+
+The ability to hurt many for personal gain is exclusive to those people we call psychopaths. Most psychopaths are well aware of the costs of getting caught, and work hard to avoid that. In rare cases this mechanism stops working. The higher the stakes, the more we'll risk. Was the Orlando shooter feeling worthless and suicidal? If so, all restraint is lost. Does the concentration of power in the UK and US drive politicians to risk everything? If so, they become like mass killers, yet on a national scale.
+
+All human behavior has, I deeply believe, motivation that can be decoded, tested, and shifted. Religion does not make men mad. It lies about the economics of crime and punishment. Like the lies we saw in the UK referendum. A mind makes insane decisions when given false data.
+
+My prediction for the UK is, incidentally, that there will be a new prime minister, then a free vote in the Parliament, steered by the referendum, and its consequences. The UK, advised by truth, will step back from madness, will remain in the EU, and will not break up. The experience will make Europe stronger. Enough with the nationalism. Maybe, a new generation of British politicians will finally address the economic and social poverty that has hit England since Thatcher and Blair. Maybe.
+
+++ Thank you
+
+I'm truly grateful to so many people for their help and support over the last months. Thank you for coming to Brussels and for visiting me, for buying my books, the single malts, for sending me money, for writing to me, and being there.

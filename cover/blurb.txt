@@ -1,0 +1,1 @@
+This book is an all-in-one primer for anyone aiming to build on-line communities. It covers the theory of Social Architecture, and the tools you need to build a community. It explains the ZeroMQ community in detail, including its collaboration process (C4). This is a powerful book for anyone building an Open Source community, or an on-line community in other areas.

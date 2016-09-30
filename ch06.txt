@@ -1,0 +1,65 @@
+// kate: font Liberation Sans; font-size 16; syntax None; bom off; indent-mode none;
++ So Far, So Good
+
+It's been two weeks since my last update. People ask me, every day, "how are you doing?" so I figured it's time to sketch this out in more detail.
+
+There's good news and there's bad news. The bad news is that I'm weak, and not getting stronger. A few times every day I find my lungs choking up, and I cough to clear them, until I'm vomiting. It's not pretty. We get used to it. My son Gregor puts down his Splatoon game and pats me on the back, as I retch into my bowl.
+
+The chemo is, I'm sorry to report, awful. I had wanted to tell you it was mild, a minor blip, yet I'm spending four of five days every two weeks, messed up.
+
+At least I'm not losing my hair. Instead, I get cramps in my esophagus and jaws whenever I try to eat, or move. This lasts from Thursday to Saturday. In between the ache and pain of my chest feeling like I've tried to swallow too much dried bread, I sleep, or vomit.
+
+I tried to walk a little back from the clinic, and ended wheezing like an old man, desperately looking for places to sit while I caught some strength back.
+
+The good news is that once this is past, by Monday or so (the chemo is on Wednesday and lasts 48 hours), I'm pretty good.
+
+Today I took my boys to school, by bike. I cycle slowly in first gear. In Gregor's school the staff greet me with that mix of emotions I'm used to. "Please stop wishing me courage," I want to tell them. Just smile and relax. The emotions can be overwhelming.
+
+My blog post, "A Protocol for Dying" went viral. That was a surprise to me. The last time one of my posts went viral was about ten years ago when I wrote on Slashdot, [https://slashdot.org/story/06/08/16/1225239/war-declared-on-caps-lock-key "War Declared on Caps Lock Key"].
+
+That time, like this time, my raw, unedited expression struck a chord and was picked up. First by the on-line community. The Slashdot article got massive commentary. My Protocol got massive attention on Hacker News.
+
+Then by a few braver journalists, and then by the mass media. This time, though, it went further. I was on Belgian television on Sunday, and on another program this evening.
+
+Of course I love the attention. For years I've worked to promote myself as a product. Hintjens, the guru. Ironic that dying turned out to be the greatest marketing stunt of my life.
+
+Two small yet significant things came into my life these last days. At heart I'm still a young boy, fascinated by technology and gadgets. In the hospital I'd dropped my phone, and the microphone stopped working. So for weeks I've been plugging in an external headset, shouting "hang on, hang on" to the caller, as I fumble through tangled cables.
+
+Then a package arrived with a Xiaomi Redmi Note 3. Magically it made its way through customs without delay, coming from Hong Kong.
+
+It's just a phone. A nice one, well executed, almost impossible to fault, and cheap. Yet what it represents is the victory of Chinese open source hardware over all competing models. If you've not yet understood the [https://en.wikipedia.org/wiki/Shanzhai Shanzai model] that drives Chinese innovation in industrial production, look at it. It is the future.
+
+I'll describe it briefly. Every firm in this culture publishes their Bills of Materials, and design specs. Any other firm may take these, reuse them, improve them. They must also share back.
+
+The Shanzai model originated in the 1990's when Chinese electronics were nasty imitations of western and Japanese products. It has grown into the dominant model for pretty much every industrial product (not just electronics) produced by Chinese firms.
+
+This is why you can buy the same product from a slew of firms on Amazon or Ebay. This is why the price drops smoothly, as predicted by Cost Gravity. No patents and trade secrets to slow down the spread of knowledge. This is why Chinese products haven't just caught up to western designs. They are way, way ahead. My Xiaomi is built of 95% Chinese components. This is why Apple will die.
+
+The second gadget I received is a funny thing called the Freewrite. I'm using it to write this article now. I can't yet tell whether the Freewrite is entirely insane, or genius. It all depends on how Astrohaus, the firm backing it, can deal with its users.
+
+This is an American design. It focuses on writing, not editing. There is no editing except backspace. (One character, one word, or one paragraph.) It is heavy and clunky. It has a slow, small e-ink screen that always lags behind. It has no ports except one USB C. There is little documentation, no explanation of its internals.
+
+And yet I love it. I wrote a review the first day I'd gotten it. 9/10 was my feeling then, and today that still stands.
+
+When I wrote my rant against the Caps Lock key, it was because I'd just received an [http://images.google.com/search?tbm=isch&q=AlphaSmart+Dana AlphaSmart Dana]. This is literally the last product in the same niche as the Freewrite. The Dana had a lovely keyboard and ran a weird widescreen PalmOS. It was instant-on, daylight readable, and wonderful for stream-of-consciousness drafting.
+
+And it had a bloody Caps Lock key that could not be disabled. That creates a dead zone right where the Ctrl key should be. Touch that dead zone and your writing turns into zombie capitals. Such an irritation it was that I wrote my rant on Slashdot, and for a few weeks, became famous.
+
+The Dana never got updates. The company that made it could not deal with mass market success. PalmOS died. It was so tragic, as the Dana and its predecessors were so //perfect// for the job, except that slight bother of lacking any support at all.
+
+For ten years I waited for someone to produce a replacement for the Dana. Please, give me an electronic typewriter with long battery life and sunlight readable screen. I'll pay for it. Use e-ink, a good keyboard, and keep it simple.
+
+And then Astrohaus launched their Kickstarter and I sent my money and prayed for this thing to even half work. Overpriced, some people complain. I shake my head. You don't get it. We waited a decade for this. It is literally the only living product of its kind in the world, possibly the universe. Please, Astrohaus, take my money and do good things with it. Don't die like AlphaSmart.
+
+So it finally arrived, just in time for my extended home stay. And bingo! A huge ominous Caps Lock key that can't be switched off. I guess it's a tradition. At least Astrohaus are promising firmware updates and have acknowledged my plea to turn this key into something more useful.
+
+Speaking of blasts from the past, last night my kids and me watched The Magnificent Seven on Netflix. The film's slow and careful pace confused my kids at first. Where is the drama, they wondered. Then Kurosawa's brutal story slowly unfolded, and transfixed them. At some point Steve McQueen's character describes a man falling off a tall building. "So far, so good," people hear him say, as he falls.
+
+This is how it feels. So far, so good. There is a crash coming. I can feel it, my lungs and chest squeeze in strange and uncomfortable ways. My body needs too much sleep. I'm not recovering strength. No pain, apart from the occasional spasms around my esophagus. I stopped using oxygen last week and it went fine. That is so great, not having to stay tethered to an oxygen cable all the time. So far, so good.
+
+Speaking of which, we're getting ready for our party-slash-wake-slash-riot on June 5th. Fifty extra chairs are on their way. We have found a place to supply the grilled goat meat. (Seriously, have you //never// tried that? With fried plantains, murderous hot sauce, and cold beer.) We are freezing ice for the beer and preparing the stage for the DJs.
+
+Venez nombreux. It will be fun. And it looks like I will still be in good enough shape to take part.
+
+Now you will have to excuse me, my kids just got back from school and that means family time. :-)
+

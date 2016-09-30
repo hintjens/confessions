@@ -1,0 +1,991 @@
+// kate: font Liberation Sans; font-size 16; syntax None; bom off; indent-mode none;
++ Confessions of a Necromancer
+
+++ Warning: Indulgences Ahead
+
+If you wanted a brief, snappy piece on the meaning of life, skip this one. I'm writing for my own pleasure this time. This is less of a blog post, more of a novella. And it's all about me, the smartest guy in the room, always with an answer, almost impossible to beat in an argument.
+
+This isn't an autobiography, I'm not going to talk about my family life, or our idyllic childhood years spent in Dar es Salaam. I'm not going to explain why my first languages were Lingala and Swahili. I'll spare you my school years, spent in the cold, dark embrace of the Scottish highlands.
+
+Instead, this is a professional road trip, for my fellow programmers. OK, not entirely.
+
+My first software products ran on a computer with 5,120 bytes of RAM, 1,536 of which were dedicated to storing the contents of the screen. If someone tells you that you can do a lot in 3.5KB of RAM, they're lying. You can't do shit with that. However my next computer came with 64KB of RAM, at the same price. You try filling that up, one assembler instruction at a time. And that's when I realized, these things aren't toys any more. They can do real work. They can make real money.
+
+I've worked on a lot of different systems. More, I've worked in the weirdest possible projects, with crews of all sorts. There has always been a thread of insanity in our business. We're hooked on doing the impossible. Clients lie to themselves that they've hired a team that know what they're doing. The team lie to their clients that they're in control. The sales people lie. The marketing department lies.
+
+Most of the time, most large software projects fail, and this is still true in 2016. Yet for most of my career, my special talent was to make projects work, no matter how impossible the technical challenges. I am a really good technical architect, able to understand systems at the lowest and the highest levels. I can write all the code myself, or I can explain to people exactly what to make, and it all fits together like laser-cut blocks.
+
+As I wrote much later in "Social Architecture,"
+
+> I've come to think that the very notion of individual intelligence is a dangerously simplified myth.
+
+It took me decades to realize that technology is a slave to personality. It doesn't matter how good the design, when there are unresolved problems in the organization.
+
+And so gradually I shifted from technical architect to social architect. From caring about technical designs to caring about people and the psychology that drives them. Because in the end, this is what seems to make the difference between a working project and a failure.
+
+++ The Microcomputer Era
+
+I didn't plan on becoming a programmer. Age six or seven I wanted to be a writer. I had Roget's Thesaurus, and read it like a novel. Words, each a story, intertwined in endless trails. Eight years of boarding school beat the dreams out of me, and at 17 I dutifully collected good exam results and started thinking, what should I study at university?
+
+My career advisor suggested computers as a lucrative option. Shrug. Seems fine. Cambridge offered a computer science course, yet my exam scores weren't good enough for that. Second best rated was York, which had a computer science + mathematics mix. I applied, went for an interview, and was accepted.
+
+English universities offer a 3-year BSc course. I was a lousy student. The maths numbed my brain. Endless theory about encoding, Turing machines, database normalization. And then finally, a chance to write some code. Work out the PDP-11 assembler code on paper. Enter it by hand using console switches. Run it, and get boxes to move around on the screen. Yay!
+
+About this time the Sinclair ZX80 came out. It was a ridiculous thing, tiny and light, with a horrid rubber keyboard. Yet it was real. I'd go with my friends to the store, and write small BASIC programs on the spot. Here, a game that let you chase a star around the screen with the arrow keys. People would watch me write these, and then ask if they could play.
+
+For two years I struggled through subjects that grabbed my attention like a slug grabbing a basket ball. My tutor was patient and miserable with me. My failing grades just piled up, academic debt. There was no repeating a year. I could change to a different degree if I wanted to. Instead, life gave me a better option.
+
+In the spring of 1981, the VIC 20 hit the shelves in the UK. I asked my mother if we could have one. We were not wealthy, and the computer was more expensive than the Sinclair. Yet it was a different beast, with color and sound and potential. She believed in me, as she has always done, and somehow found the money for the computer.
+
+At first I copied games from magazines, typing them in -- as we did, in those days -- and then playing them. With a VIC cassette recorder, it became possible to save and reload them. Then I started improving the games, adding graphics and sounds. The VIC chip was powerful, if you were able to figure it out. Then I wrote my own games, mixes of assembler and BASIC. And then I started selling these.
+
+There is a kind of shock, the first time you make something with your own hands, and exchange it for money. I bought empty cassettes, drew and copied inlays, and cranked out my games. A quarter page ad in one of the main magazines cost 125 pounds for three months. One ad impression would produce maybe fifty sales, at five pounds each. When I had a new cassette I'd send a mail flyer to existing clients.
+
+By the summer of '81 I had sold a few hundred games, and attracted the attention of Commodore, who sent me a shiny new C64 free of charge. Computer, disk drive, monitor, and printer! I called my tutor and said, look, Bill, I'd really like to take a year off university to write and sell video games. That OK with you? Sure, he said, and did the necessary.
+
+And so it was that I started my first business. The C64 had vast capabilities, poorly documented. I worked through the reference manual until I knew it by heart. There was an assembler cartridge yet it was clumsy, so I wrote my own assembler tool. And then I started writing a new game. Just a standard shoot 'em up, yet crazy fast and fun, and I was coding day and night to get it finished.
+
+At the time, there was nothing in the market for the C64 except the old nasty BASIC games hastily ported to the larger screen. So I was working like a crazy to get a large-scale production line working. I'd designed and printed full color inlays, fifty thousand pieces.
+
+Putting the cart firmly before the horse, I'd even written a natty copy protection scheme that I was so proud of. Your standard cassette held a BASIC program that you would LOAD, and then RUN. You could as well SAVE it again, to a blank cassette, and people did this a lot. It meant that a popular game get widely shared among computer clubs and high schools. God forbid!
+
+The standard LOAD/RUN thing also seemed clumsy, and I wanted to make it smoother for the player. I'd found that you could format the saved data so that it loaded into a specific address in memory. I crafted a block of data that loaded itself into low memory, and overwrote the stack. When the LOAD routine finished, it popped the address off the stack and hence jumped into my code, which was a special loader. That pulled the rest of the game off cassette, loading it into memory, and then running it.
+
+Many years later my friend Jonathan told me other C64 games used the same scheme, and he copied the games using a special cartridge that simply took a snapshot of memory when the game was loaded and ready to run. Pirates 1, Hintjens 0.
+
+I was working with an audio cassette duplicator in Port Seton, and we'd cracked how to produce software cassettes at high speed. We could produce several thousand a week per machine. It was all ready to go, and then I made a fatal mistake that taught me my first big lesson about the corporate world.
+
+Instead of running the ads and shipping out my software, I showed my new game to Commodore.
+
+They loved it and told me they wanted to distribute it. At least UK wide, and possibly all of Europe. I was spell bound. My own sales would be in the tens of thousands. Commodore would be able to sell ten, a hundred times more.
+
+So I told them "OK" and paused my own sales. Boxes of cassettes sat in my room. I did not run my ads. And Commodore told me they were working on it. And so I waited.
+
+As I waited, other games started to appear. The large video game companies had finally gotten their act together, and were attacking the C64 market like a pack of killer whales attacking a young baleen whale. Full color ads promised everything. It became pretty obvious that my window had closed.
+
+Commodore, I asked, where art thou? What the heck is going on? Finally they came back to me. "We're not going to distribute your game after all, thanks," they told me. Incompetent or malicious, who knows. I cursed them, and shut down my business.
+
+As it turned out, it was also summer, and so I went back to university to finish my degree. At least I had a personal computer system to work on, and lots of experience in 6502 assembler. The 6502 chip was simple and fast, with a minimal instruction set. In some ways, a precursor to the RISC CPUs that dominate today's world.
+
+My tutor Bill gave me Loeliger's "Threaded Interpretive Languages: Their Design and Implementation," and I decided to make this my thesis topic. The result was a lovely Forth-like language sat atop that brutalist 6502 assembly language. Fast enough for video games, and such fun to program! Every programmer should make a Forth at some point.
+
+Sitting in my room coding day and night felt right. Whereas I'd spent my first two years avoiding hard work, now my brain was addicted to it. Vaguely, I realized there were courses I should be attending. Mostly, I ignored them, and they ignored me right back. My code got too large for the 170KB floppy drive so I stripped off the comments and carried on coding.
+
+When it came to final exams, I sat with my friend Nigel and we skimmed through the course material, making notes. A few hours was enough to read a years' material, summarize it, and digest the summary. By luck our exams were always in the afternoon. It was a blur. One exam a day for two weeks. I came first or second in every one. The thesis committee asked me why I'd not commented my code and I shrugged. Did it matter? Look, let me demo you a couple of games, and walk you through the core threading logic.
+
+The two years of fails brought down my overall degree yet in my entire career not a single person ever, once, asked me what I'd achieved at university. It was just never relevant. There's a big lesson here. Many of the top students in my course went off to Silicon Valley. I slid under the radar and moved, despite my best intentions, to Belgium.
+
+++ Working for the Man
+
+The Man got me straight out of university, for in those days we still had mandatory military service in Belgium. I'd lived so long in the UK, and was naturalized (I still have a UK passport), yet Belgium demanded its cup of blood, and it got me.
+
+Military service was actually fun. In boot camp we were split into the intellectuals, and the lifers. People like Henri, a nuclear physicist, and myself wore the glasses and obviously had the nerd soft hands. The lifers were young professional soldiers, 16 or 17, who cleaned and scrubbed and marched and drilled. We nerds sat around the barracks, happily useless. They were not going to give us guns.
+
+Ironically, I was already an excellent rifle and pistol shot, with prizes from Bisely, where my school shooting team had competed every year. I didn't tell them that, mainly because I spoke no French and no Dutch.
+
+I worked at the national map making institute. They had a large project to make a digital map of all of Belgium, for the US air force. They carefully scanned in paper maps, tracing the railways, roads, city outlines, canals. The goal was to make maps for cruise missiles.
+
+My boss showed me the team, their GCOS minicomputer, the IBM terminal running on a time-sharing system somewhere, and told me, "your job is to help us make the tapes."
+
+Turns out the USAF wanted the map data on magnetic tapes. We could send data from the GCOS machine to the IBM, though I completely forget how that worked. Working in PL/I on the IBM, I could load in the map data and write a tape.
+
+Ah, but there was a catch. I was not the first person to try to make tapes. The USAF systematically returned the tapes as "unreadable." After several years of mapping, the project was jammed on this one point. So being the smart young thing I was, I investigated. It turned out the USAF were using a UNIVAC system, which unlike the IBMs, the GCOS, and every normal computer in existence, used seven bits per byte instead of eight.
+
+Magnetic tapes were coded with 8 bits in a stripe, perpendicular to the tape direction. These stripes were written like this "||||||||||||" along the tape. It struck me that the UNIVAC was probably just reading seven bits at a time, instead of eight. So the first stripe had one byte, plus one bit of the next (seven-bit) byte. So I staggered the bits like that, and we sent off a tape to the USAF.
+
+It came back after the usual three or four weeks, with a new error message: "Bad data format." Bingo. Now I went back to the documentation and figured out what the real mapping data should look like. What we were sending from the GCOS wasn't even close.
+
+Some weeks later (I got sidetracked into writing a small compiler on the GCOS that could access more exotic system functions and give me unlimited priority to run my heavy conversion programs) we had a new tape. We sent it to the USAF, and a few weeks later came the reply, "Valid."
+
+At which point, all hell broke lose.
+
+What I didn't realize was that the project had some years of budget left. The mapping was mostly done, and the team mostly idle, and happy with it. Lacking any way to send valid tapes, the Belgians simply kept pushing back the date, and collecting their sweet, sweet USAF cash. (I am speculating that it was sweet, because I was being paid a conscript's wage of 45 BEF or about 1.10 EUR per day.)
+
+My boss told me I could take the rest of the week off. Actually, don't come in every day, or unless you feel like it. I shrugged and started my new regime of two half days per week.
+
+There is a lesson here too. You need to follow the money, and understand how it flows. I could have walked away with my own personal GCOS system, if I'd played it smart.
+
+The second lesson, which many a foreigner has learned in Belgium, is that it's an easy country to come to, and a hard one to leave. For reasons, I decided to stay in the place and find a job.
+
+++ Still Working for the Man
+
+I found a job at Sobemap, which was in 1984 the largest software consultancy in Belgium. I was hired by a large good natured man called Leif, who was looking for a fellow spirit to help him write software development tools. This was in the days of COBOL and weird systems. Sobemap had a commercially successful accounting system, EASY, which they maintained on seven or eight different platforms, with a team for each platform. Leif's job was to build the basis for a single portable EASY that could run on everything.
+
+Turned out, though Leif only told me this a few months ago, that the main objection to hiring me was my age. Too young. I guess it was a high risk project and they hoped for someone with relevant experience. Needless to say, the number of people building cross-platform COBOL frameworks, worldwide, was approximately zero. We were the first to even think of such a mad thing.
+
+It took only a few months to build the basic layers, and then my job was to make those work on new, exotic systems. I'm talking Siemens BS/2000, IBM S/36, DG AOS, MS-DOS (once we discovered the wonderful Realia COBOL compiler for the PC), and IBM MVS/CICS. The core routines had to be in assembler, to be fast enough. That was when I discovered C, on the DG and the VAX and then on the PC.
+
+All these systems died, one after the other, over time. Good riddance. The inconsistency was incredible. Every machine had its own concept of file structures, organization models, compilation procedures, and so on. Imagine learning ten different varieties of Linux, each from a different planet.
+
+No matter, we learned to dive under the consumer level OS and language, and into system internals. That was inevitably the only way to get the performance and behavior we needed. On a BULL TDS (short for tedious) system I wrote a memory manager, in COBOL no less, to fit large programs into the pathetic excuse for "main memory" that system provided. On IBM S/36, the same, in assembler, to swap megabytes of COBOL code and data in and out of the 64KB main memory.
+
+Leif and me, helped by various people who came and left, used our portability tools to build a powerful set of tools: editors, code generators, reporting tools, and so on. Developers loved these tools. You could develop and test on a PC, at home, and the same code would run unchanged on an IBM mainframe. We had cracked the problem of "write once, run anywhere," some years before it became a fashionable problem.
+
+The IT managers of our clients didn't share our passion for portable code. As one IT manager told us, "I've just spent so much on a new VMS system. Why do I want portability?" Logic doesn't apply, when people work on pseudo-mystical belief. A very few IT managers saw the potential, used it, and built their empires on it. Yet mostly we had few external clients and direct sales.
+
+All this time, the company kept changing and shifting. The smart, nice guy who hired Leif and then me left for a startup. We were sat on by a succession of incompetent, arrogant illiterates. Despite delivering success after success, there were no pay rises, no bonuses. Eventually after five years, our team called it quits and we left the firm, each to go separate ways.
+
+++ Sticking it to the Man
+
+One taste of employeeness was enough for me. I did some research, found an accountant, and became an independent consultant. My first gig was for a trade union organization. They did not pay much yet they treated us with respect. Jonathan Schultz and myself built a project management system, using that awesome COBOL framework.
+
+Somewhat adrift, I worked on various projects with old contacts. We built monitoring software for PCs for a UN transport project in Africa. Set-top clients and servers for a cable TV company. Software to produce and decode shipping manifests, using a prehistoric format called EDIFACT. Mostly I worked in C, using Turbo C on MS-DOS. And a lot of x86 assembler, using MASM, the Microsoft assembler.
+
+Then I got a call from my friend Hugo at Sobemap, now renamed to Sema. "We need your help to make this project work, what's your daily rate?" I quoted a comfortable figure. They agreed. And so I went back to work for the same projects, earning five times more.
+
+I learned one important lesson: the more your clients pay you, the more they appreciate you and listen to what you say. The same CEO who'd walked past me in the corridor as if I was a tattered old poster now stopped and shook my hand. "Glad to have you back with us, Hintjens!" he said.
+
+And so I found myself back in the world of enterprise software projects, providing that special skill we never really had a name for in our industry. Plumbing. Infrastructure. Wet work. Black magic. Making it possible for mediocre developers to build really large applications that worked well even under stress.
+
+It was 1991, and my first major project was to port our tools to VAX ACMS. The project was signed and sold before I had a word to say. The IT manager was one of those who knew Leif and me, understood our blood-and-guts approach, and loved it. He had bet his career and arguably his firm's future, on us succeeding with an impossible project.
+
+So here was the challenge. The client wants to build a travel reservation system to serve tens of thousands of agents in offices across Europe. These agents would log into the system, query availability, make bookings, and so on. The backend for this system would be a cluster of modern, cheap computers called a VAX. These cost a fraction of the IBM mainframes that the industry still relies on. It has cheaper memory and disks than IBM's dinosaurs (though not as cheap as PC hardware). It runs a modern operating system (VMS) that is fast and flexible (though not as nice as UNIX). DEC's wide-area networking was decades ahead of IBM (though not as nice as TCP/IP).
+
+The only problem is that IBM's mainframes have long ago cracked the problem of sharing one mainframe between tens of thousands of users. Whereas DEC, the firm that makes the VAX, has not.
+
+If you want to get technical, IBM used smart 3270 terminals that dealt with all keystrokes locally, and interrupted the computer only when there was a screen of data ready. Somewhat like a clunky web browser. The mainframes then run a "transaction processing system" called CICS that pumps these screens of data through applications, with all state kept out of the process. One application can thus serve masses of users.
+
+The VAX on the other hand used dumb VT terminals. These sent every single keystroke back to the computer to deal with. Each terminal, and its user, have their own process. It's the same model that UNIX and Linux use. Five terminals, five interactive "sessions", five shell processes. So VAX gave a much nicer flow, and you could do things like scroll smoothly (impossibly on a 3270). On the down side it could not deal with anything like the number of users at once. Each of those processes eats up virtual memory.
+
+DEC's proposed solution was to use smaller front-end MicroVAXes, each capable of handling around 50 users. These would then talk via some magic to the back-end cluster. The client did some maths. Two hundred front-ends and ten thousand interactive licenses. That cost several times more than the rest of the project together. They might as well buy an IBM mainframe.
+
+Which was when someone decided to bluff the project, sign it for the budget the client was willing to pay, force DEC to accept whatever solution we came up with, and then hire me to make it all work.
+
+Since no-one had told me it was impossible, I took the documentation and a test system, and began to play with DEC's transaction processing framework, called ACMS. This was the closest DEC had to an IBM CICS-style transaction processor. Think of a container for server applications. You could start and stop apps, and then send them events from other processes, even across a network.
+
+So far so good. Then I looked at VMS's asynchronous I/O system. To get consistent and fast response in a real time system, you have to work asynchronously. You can never wait on something happening.
+
+I'm going to explain this in a little detail, because there are lessons here that still apply today. If you want to make truly massive systems, it's worth understanding the transaction processing (TP) model. Today I'd explain it as follows:
+
+* Your application consists of a collection (hundreds, or thousands) of services. These are connected either directly or indirectly to your front-end UI.
+
+* A service runs with N instances, to provide scaling for many users. The TP starts and stops instances as needed.
+
+* The services typically work with further back-ends, databases, and so on. This is not the concern of the TP system.
+
+* A single service instance works with a single "transaction" at once. Be careful: the term "transaction" is over-loaded. Here, it means a request to do some work, where the work comes from the UI either directly or via some other layers. It is often used to describe a package of work done by a database. The meaning is similar, yet not the same thing.
+
+* Services hold no state for UI sessions. If the service transaction needs state, it is held by the TP, and passed to and from the service, with each call.
+
+This is actually close to the "actor model" that we aspire to with asynchronous messaging.
+
+OK, back to asynchronous I/O. Let's say I'm waiting for the user to press a key on their VT220 terminal. In synchronous code I'd make a system call that waits for input. At that point my process is swapped out, and effectively dead until the user presses a key and input arrives.
+
+An asynchronous call (called an "AST" on VAX/VMS) is a bit different. It does a similar "wait for input" call, and adds extra arguments. It says, "when you are ready, call this function, and pass this state." The critical difference is that after the call, the process isn't suspended. It continues right along with the next instruction.
+
+So you could for instance wait for input on 100 different terminals by making 100 AST calls in a row. You could chain to a single function, and pass the terminal ID as state. Then your process could explicitly suspend itself. Each time a user pressed a key, the process would wake up, the function would get the event, and process it.
+
+This event-driven I/O model is still how we build really fast multi-threaded servers today. However a server typically only deals with one kind of event, namely network traffic. Perhaps three: input, output, and errors. To write an ACMS front-end server, you need to deal with rather more I/O events. At least:
+
+* System calls to resolve logical names, terminal IDs, network names, and so on.
+* System calls to read and write to disk.
+* Events coming from terminals.
+* Events coming from ACMS, typically "finished doing this work."
+
+So you don't have a single event handler, you have dozens or hundreds. This makes the server design horrendous. Imagine writing a large program consisting of tiny functions, where each specifies the name of the next function to call, as an argument.
+
+Being a clever wunderkind, I figured out a solution. One of our COBOL tools was a state machine designer. A neat thing: you describe your program flow as a state machine, and it turns that into code. I'd started rewriting that in C, a project that ended up as [https://imatix-legacy.github.io/libero/index.htm Libero].
+
+Using Libero, I could write the flow of execution as a state machine, and generate C code to make it run. In the core of this C code is a generic AST handler that can deal with all possible events. It knows the state machine and can just call the next function itself.
+
+So here is a piece of the state machine, which initializes a new terminal session. What this means isn't important. The point is you can read it, the words kind of make sense, and you're not writing crunky chained AST code:
+
+[[code]]
+Have-Lat-Connect:
+    (--) Ok                                 -> After-Sign-In
+          + Spawn-New-Lat-Thread*
+          + Move-Thread-To-Active-Pool*
+          + Get-Terminal-Port-Name
+          + Get-Terminal-Characteristics
+          + Set-Terminal-Characteristics
+          + Write-Greeting-Message
+          + Assert-Iosb-Okay
+          + Init-Connection-Parameters
+          + Acms-Sign-In
+          + Check-Acms-Status-Block
+    (--) Error                              ->
+          + Signal-Io-Error
+          + Deassign-Terminal-Channel
+          + Terminate-The-Thread
+[[/code]]
+
+So I presented this approach, with some examples and test results, to the client. They asked a respected consultancy firm (Andersen) to check it. The two consultants who did that work had previously worked for DEC and were experts in ACMS server design. I think they'd helped write the standard ACMS front-ends. After some days of explanations, they went off to write their report, which came down to "the proposed approach is insane and will not work."
+
+Somewhat later we discovered that Andersen had been hoping to get the contract themselves. I learned an important lesson about consultants: they are professional liars.
+
+The IT manager of the client took the report, threw it in the trash, and told his management, either we go with this option or I quit and you can forget this project. Since this man had built the original system on IBM CICS, and brought most of his team into play, that was a serious threat. Management caved, Andersen were kicked out, and we got the green light.
+
+The system we built worked as designed and went live on time in 1992. It grew to handle multiple tour operators, with front-end servers happily dealing with two thousand terminals each. We maintained and extended the system every year for a decade, little by little. When I stopped working with Sema, the client paid maintenance to me directly, until the system was finally decommissioned in 2010.
+
+The lesson here is, if you have the trust of your client, and s/he has real power, you have done half the work already.
+
+This was a perfect software project. Working with good matériel; decent hardware and a non-insane operating system. Working with a smart team that know their stuff, and a client who likes and trusts you. With total freedom to build things the right way. Where the hardware and software bends to your will. Where you can take the risks, analyze them, and design them away.
+
+Little did I know how rare such projects are. Shortly after the tour operating system went live I found myself in an insurance company in Brussels, looking at an ancient terminal the size and shape of a large microwave oven. Carved in the bezel was the ominous word: "UNIVAC."
+
+++ Shit Goes Downhill
+
+I imagine the conversation went thus: "You're saying you can make the EASY accounting system work on our existing UNIVAC mainframe?" followed by a confident reply, "Of course! It's portable! Now if you'll just sign our framework agreement on licenses and rates," followed by a dryly muffled laugh and the scratchings of quill on parchment.
+
+Whereas the VAX project was a smart bet on new technology, the insurance company was in the midst of a fight between old and new, and we found ourselves on the wrong side of history. The old guard was defending their UNIVAC mainframe (and its not trivial budgets) at all costs. The new guard were trying to push the IT infrastructure towards UNIX.
+
+The first time I saw our client -- the incumbent IT manager -- he was slumped in his chair, melted from fatigue and age, a cigarette in his hand, ash and stubs on his desk. Here is a man in the terminal stages of a truly horrific disease, I felt.
+
+I'm sure that there was a time when UNIVAC made relatively excellent computers. I'm sure someone, in the early 1960's thought, "seven bits is going to be enough for anyone!" I'm sure at some point the slogan "America's First Commercial Computer System!" was spellbinding for customers. But not Brussels in 1992, please no.
+
+By 1992 we'd invented the Internet and were starting to see the first Linux distributions for PC. I had an Yggdrasil distro on CD-ROM that included, wonder of wonders, a free C compiler. Linux was not just a real OS, as compared to the kindergarten MS-DOS, with proper virtual memory and tools. It had the same shells (ksh, bsh) as the Big Iron UNIX boxes we were starting to see in companies.
+
+And here we were, with a system pulled through time like an Automatic Horseless Carriage from 1895 trying to compete in the 1992 Grand Prix.
+
+Leif and I briefly looked through the system docs, and played with the terminals. I looked at the microwave-with-keys thingy and said that it seemed rather ancient. "Oh, it gets worse," said Leif, looking at a page in the manual. This was going to be a familiar phrase. "Oh, it gets worse!"
+
+I'm not going to bore you with detail. Just one small piece to show how bad it was. The UNIVAC terminals were like the classic IBM 3270s, block mode devices that sent the user input as a single block of data, back to the mainframe transaction processor. Something like a HTML web form, except sending field/value pairs, it would send row/column/value tuples. Fair and good.
+
+The first problem we hit was that the large Enter key did not send anything. Oh no, that would have been too obvious. Instead there was a separate SEND key. OK, we guessed UNIVAC users were used to that. More fun though, the terminal only sent up to the cursor, no further. So if you typed some data, and then backed up to fix an error, and then pressed SEND, you lost half your input.
+
+The terminal had function keys that we could program by sending commands together with screen data. So our hack was to add an invisible input field on row 24, column 80. Then, F1 would move the cursor to that field, do a SEND, add a code for "F1" (our apps used sixteen function keys for navigation), and then move the cursor back to where it had been.
+
+The worst part, which is hard to wash off even after years, is that we were actually proud of this. We'd made it work. There were dozens of other "WTF?" moments, yet eventually EASY could run on this prehistoric system. Leif and I made our excuses and found other projects to work on.
+
+++ Taking Money off the Table
+
+Around 1992 Sema was building a reservation system for a high-tech fun park in France called Futuroscope. Part of the challenge was to send bookings to the various hotels that clustered around the park itself, and sat further afield.
+
+Before we automated it, bookings were faxed by hand. This was before the days of office laser printers. Each night (or perhaps twice a day), a batch job ran that printed out all hotel bookings on a "line printer." This produced a large "listing," perforated so it could be torn into individual sheets.
+
+Some poor fax jockey took got listing from the Computer People, ripped off the header and footer pages, separated the rest into individual pages, and chopped these using a guillotine into A4 width, so they would fit into a fax machine. Or perhaps they faxed them sideways, breaking all the rules of fax decorum of the time.
+
+I can't imagine the joy of entering each fax number manually, waiting for the modems to connect, feeding in the sheets, and sorting the bookings into "done" and "failed, try again in 30 minutes," and "hotel fax seems borked, call them to see what's wrong" piles. Especially in peak season, when the booking system would spew out hundreds of bookings a day, and even a single misplaced booking would result in drama. If you've never seen a Parisian family of five arrive at a hotel where their booking didn't get through, they make the citizens of San Jose look polite and charming by comparison.
+
+Free software fixed this and destroyed the "fax jockey" position, at least in the Futuroscope.
+
+Futuroscope were looking at commercial bulk fax systems. These were extraordinarily expensive, thousands of dollars just to get started, and more depending on capacity. We found this distasteful especially since by this time a fax modem (a small external box that plugged into a serial port) was maybe a hundred dollars. On Windows we were used to software like WinFax that could send faxes using a special printer driver.
+
+Also we did not want to have to interface with these beasts, which used bizarre proprietary software that I knew was going to cause us needless pain. And like I said, if the faxes didn't work, the whole system was suspect.
+
+So I looked around and found an free software package for UNIX called Hylafax. Together with another free software project called GhostScript, we could create nice (i.e. using proper fonts, and with the Futuroscope logo) bookings, and send them to the hotels entirely automatically.
+
+My idea of using free software was received with solid, head-shaking skepticism. This just wasn't how things were done. What sold my proposal were two arguments. First, that every franc the client spent on expensive fax machines was a franc we couldn't invoice. Second, the fax subsystem was so important that whomever supplied it would become an important vendor. Surely that should be us (Sema) and not some random box seller.
+
+OK, Sema said, if you can make it work, we'll sell it to Futuroscope. So I downloaded the source zips for the packages, built them, and tried them out. It was all surprisingly simple. The hardest part was finding a fax modem that would work with the UNIX server, so I started work on my PC using its fax modem card. This was in the days of dial-up and I paid around $2,000 a year (in today's money) to one of Belgium's first ISPs, in Leuven, for Internet access.
+
+It turned out that a single fax modem was able to handle peak traffic, especially since there was no time lost messing about entering fax numbers and feeding paper. Hotels never replied by fax, so there was no need to handle incoming faxes. All we needed was queuing of outgoing faxes and a way to know if they failed.
+
+Which it turned out, Hylafax mostly did for us. It used a neat client-server design so the Hylafax server ran in the background, and our fax script called the Hylafax client each time it wanted to send a fax. The client passed the fax onto the server, which queued it, and sent it when it could.
+
+Hylafax automatically retried sending, a few times, so we only had to deal with hard errors (broken fax, run out of paper, hotel on fire, that kind of stuff). We recovered the status codes later, from the Hylafax log file, and pumped them back into the application.
+
+It came down to a rather simple Bash script that took the next fax from an inbox (a directory of with one file per booking), called GhostScript to create a printable page, called Hylafax to send it, and then moved the fax to the outbox. It also created a log file that the application could read to know what happened. This script ran as a daemon, sleeping for a second if there was no activity.
+
+It worked nicely. The good folk at Futuroscope were a little shocked that a simple fax modem and some magic software could replace the large industrial-sized fax machines their vendors were trying to sell them. Nonetheless, they saw it worked, shrugged, and the system ran nicely.
+
+Only once did things stop working, when the application was moved to a faster, cheaper server. Turned out someone had implemented "sleep for one second" by busy-looping. On a multi-user system, no less. People had wondered why everything froze for a heartbeat when someone confirmed a booking. Yes, the code said something like,
+
+[[code]]
+PERFORM CONSUME-WHOLE-CPU
+  2000000 TIMES
+[[/code]]
+
+Their proposed fix was to increase the counter to 4 million times. I sighed and explained how to call the Bash "sleep" function from COBOL.
+
+Lesson learned: identify the riskiest parts of your architecture and bring them under your full control. The point of using free software was that we could control everything using Bash scripts. We could test everything in isolation. We could in effect build a full solution, removing all risk, faster than it took us to learn and interface with existing solutions.
+
+Successful use of free software in a commercial project was a shock to Sema in 1992. There was some talk of turning the fax gateway into a product yet I couldn't in honesty package a hundred-line Bash script for sale.
+
+++ Wiring the Factory
+
+Shortly after, and with UNIX, HylaFax, Bash working as mind-bleach for my UNIVAC PTSD, I worked with a Sema team on an industrial automation project. In short, this meant getting a large cement factory (owned by the firm CBR, one of the main Belgian cement producers) to talk, in a matter of speaking, with the SAP system that took orders and invoiced customers.
+
+When we finished the project (and this is a flash-forwards), the head of our department came storming into our offices, quite angry. He showed us the figures for the work we'd done. We'd completely missed the budget and he was afraid it was going to cause real problems for the client.
+
+I was a little confused at first because we'd worked hard and well, and pulled what was rather a mess into a coherent, well-working system. The managers on-site adored us, and so did the managers at customer HQ. What was the problem?
+
+Turns out, Sema had made a fixed price bid, based on some random estimates of how much work we'd have to do, multiplied by the usual "engineers always underestimate the work" factor, plus random "project management" amounts, and so on. It was a fairly solid budget, for a major upgrade to the factory.
+
+And we'd under-spent by such a large amount that Sema's finance department had red-flagged the figures as impossible. I laughed and explained that we'd simply done our work well. And indeed the customer never complained. We did not get bonuses, or raises. It was simply our job, and my reputation for pulling off miracles rose a few notches.
+
+I'll describe the project itself, and how we got it to work, because it seems interesting. The factory produced dry cement, which was sent by truck all over Belgium. Clients would place orders, which would be scheduled, and then sent to the factory. Truck drivers (independent contractors) would come to the factory, get a shipment, and drive off to deliver it.
+
+This was done largely by hand, which was slow and inflexible. Orders would be faxed through to the factory, where someone would schedule them, then enter them on a local application. Truck drivers would arrive, and at 7am the booths would open. In each booth, when a truck pulled up, an operator would choose an order, print it out, and give that to the driver.
+
+The driver would then find the right loading bridge for the kind of cement, and give the paper to the bridge operator. He would control the loading pipes, confirm the order on his computer screen, and the trucker would go off to deliver it. Some trucks were dry, some got additional loads of sand and water and did what concrete mixers do.
+
+Customers liked the cement, and hated the ordering process. It was slow and clumsy. If the weather suddenly got better or worse, there was no way to change an order to take advantage. You can't pour concrete when it's below freezing point. What do you do if there's a cold snap, and a truck full of the stuff turns up?
+
+Industrial automation is a specialized business, and it was not ours. There were companies who knew this area, and one firm had built new automated loading bridges for the factory. Sema's job was to build a scheduling application. Another firm had built an application to replace the booth operators, and allowing more booths to be added over time. Yet another firm was providing various pieces of hardware. And then we had to connect the scheduling application to an SAP system (in Brussels, far from the actual factory) used for sales and invoicing.
+
+None of this had been developed or tested beforehand. So when I arrived on the project, we had five different teams building stuff that was supposed to work together, and of course, did not. Apparently this was just standard practice: bring a bunch of stuff to a site and then hammer at it all until it worked. What made it extra fun was that each vendor had the attitude of "our stuff works, so if there's a problem it's yours, not ours."
+
+It was made worse by the practice of fixed budgets. Each firm had made offers, which the client accepted. Spending an extra day fixing someone else's problems meant a day of lost income. All this is standard in construction projects. Yet building a complex software & hardware system is a different thing.
+
+Let me give an example. The design used smart cards, a great idea. When a driver arrived, the kiosk would spit out a smart card holding all the order details. The kiosk would then say "Go to bridge 4" or whatever. At the bridge, the driver put the card back into a kiosk, the cement loading started, and that kiosk printed a receipt, for the driver.
+
+So here we are with a UNIX system running the scheduling application, a PC running the kiosk app, and smart card readers. The team writing the kiosk app had no idea how to talk to the UNIX system, nor to the badge readers. No-one has experience with the smart cards, which the client has bought from Siemens. Siemens is not providing much support, and this is a decade before the web made it all easy.
+
+And in every meeting, the attitude from each firm was, "not our problem, our stuff works." It was after several months of this toxic stalemate that I'd joined the project, in my usual dual role as plumber and fire fighter.
+
+My colleagues and me adopted a simple solution, which was, "every problem in this project is ours." I figured out how the badges worked and we designed the badge data format. I wrote serial I/O routines to read and write badges, and handed them over to the kiosk teams. We built TCP/IP clients and servers to connect the kiosk application to the scheduling app, and gave the kiosk team libraries they could just call.
+
+This all sounds like a lot of extra work yet we loved it, and were good at it, and it was faster and easier than arguing. At first the other teams were confused by our approach, and then they realized things were actually moving ahead. Little by little the project became happy again.
+
+The kiosks were the cornerstones of the project, and were abysmally badly designed. The client provided the physical infrastructure, and the large metal housings. Various parts, such as cement-resistant keyboards, were ordered from afar. There were PCs to run the application, and little off-the-shelf Epson thermal printers to print tickets. Nothing had been tested beforehand.
+
+And predictably, as the kiosk team tried to put this all together, nothing worked. It was almost comedic. The printers were not designed for kiosk use but as cash register printers. They had to be propped up at an angle with pieces of wood for the tickets to come out, and they jammed constantly. But the worst offenders were the screens. We'd started working in late winter, and by spring we were testing the kiosks for real.
+
+As the sun rose, it dawned on us that the kiosk entrances faced south. The kiosk design was nothing as sophisticated as today's parking kiosks or highway toll kiosks. Flat panel screens were still science fiction. So here we have a PC in metal box with its CRT monitor behind a sheet of glass. The driver had to get out of their truck, their badge (which was both for ID and to hold the current delivery), choose a delivery, confirm it, and get their ticket.
+
+With the sun shining from behind, the screen was unreadable. CRTs did not have great daylight visibility. In direct sunlight, behind a sheet of dirty glass, it was tragic.
+
+One day, watching the frustrated drivers squinting at the glass as they tried to read the screen, I took a flat piece of cardboard, cut out a credit-card sized hole, and taped it over the glass. This fixed the problem. When I came back to the site a week later, both kiosks had metal plates, to my design, welded over the screens.
+
+This was the tragicomic part. The project was also just painful in other ways. The client had specified that the kiosk application should be able to run even if the scheduling app did not work. This was sane, since the exchange of orders to and from the SAP system had never worked well. So if anything failed upstream, they could continue to ship cement, and then re-enter their orders afterwards.
+
+The kiosk application thus had a "stand-alone" mode where, if it decided the scheduling app was not working, it would take control of things. Except, this app would detect a "failure" randomly, and the entire system would swing in to, and out of, stand-alone mode. Each time that meant fixing things up by hand afterwards.
+
+It was stupid things like, the kiosk app would open connections and not close them, and exhaust file handles on the UNIX system. Or, it would run a 100% CPU background task that slowed everything down so that the I/O loop could not run, and timed-out.
+
+There was a point where the factory would call us at 4am, saying the system was down, and we had to come on-site to get it working again. That meant a 2-hour drive. When we arrived, a long queue of furious truck drivers waited on us to fix things. Which meant restarting things, and manually consolidating a mess of local and remote orders. The real damage was done by switching in and then out of stand-alone mode.
+
+The lesson here is that making systems more complex, to try to make them "reliable" will usually make them less reliable. What we were experiencing was "split brain" syndrome, the bane of any clustering design. Allowing the PCs to randomly decide they were in charge was a Bad Idea. Letting them decide to switch back to normal mode made it much worse.
+
+Since the crises were so random, we started sleeping in the factory offices so we could be there at 3am to try to catch it happening. To be frank, I didn't enjoy sleeping on a mat in between office furniture, in the heart of a massive industrial zone. Once we decided we'd bring beer, it was slightly better.
+
+What we eventually came to was a panic button on the PC screen that forced stand-alone mode. If orders stopped arriving from the UNIX system (for any reason, one does not care at 5am), the operator clicked the panic button, and the PC switched to stand-alone mode. The operator could then handle the morning peak, with a little more manual input. Somewhat later when things were calm, we'd consolidate orders with the UNIX, investigate what had caused the fault, and switch back to normal mode.
+
+Additional lesson: fail-over automatically and recover manually.
+
+Despite all this, we finished our work so far under budget that it raised alarm bells. The client loved us, having seen us in action. Years later, this would pay off.
+
+The main lessons I learned were obvious and yet worth stating, perhaps because the industrial world is so distant from the normal pure digital development world:
+
+* Don't expect random work from random vendors to magically work together.
+* Do not develop and test in your production environment.
+* When things go wrong that even marginally involve you, assume responsibility until you know where the real problem lies
+* When you use hardware and software that bends to your will, you can work significantly faster.
+
+++ Fear and Loathing in Brussels
+
+In an industry that is driven by forwards change, it is shocking how many projects are based on betting against the tide. By this I mean forcing an application to run on some antiquated, expensive, inflexible, and painful platform, when new, cheap, flexible, and enjoyable alternatives exist.
+
+It almost always ends in disaster for the organization. And yet I've seen this happen so often that it is almost a caricature. Brain-dead management forces obsolete technology on team who build mediocre application that fails to fix organization's real problems, which then gets taken over by smarter competitor.
+
+Here are some of the reasons this happens so often, in my opinion:
+
+* **Psychology of sunk costs**. "We've spent twenty million on our goddamn mainframe and goddamn you if you think we're going to junk it just because you have this new fancy-wancy UNIX thingy."
+
+* **Self-interest of vendors**. "Sure we can expand the main memory from 64MB to 128MB. It may be a little expensive, but mainframe memory is special! It's better than that cheap, unreliable UNIX memory!"
+
+* **Politicization of IT**. "My departmental budget is $10M per year, and you're talking about slashing that by half and yet adding 10x more users? Are you insane? You're fired. I'll find a consultant who agrees with me."
+
+* **Fear of the unknown**. "Why would we use that 'UNIX' thingy? It's just a large PC, totally unreliable. And anyhow, UNIX will never be widespread. No, we prefer our tried-and-tested mainframe architecture that runs real networks like SNA LU6.2!"
+
+Shortly after the UNIVAC trip, I was thrown into one more such project. The team was building a new financial system. The team was using our COBOL toolkit. They were using AIX UNIX machines for development. Production was to be on a BULL TDS system. One. More. Obsolete. Mainframe.
+
+The entire project was designed as an internal hostile takeover of the firm. The firm was a recent fusion of two businesses. The profitable one consisted of many smaller offices, each working their own way. Clients got customized service and paid a premium for it. The unprofitable firm however had the power, for political and historical reasons.
+
+So the new planned system would enforce order and consistency on those cowboy offices. It would in effect break their independence and bring them into a neat, centralized organization. It was a classic battle between good and evil, between sanity and insanity. And once again, I found myself on the wrong side of the battle lines.
+
+The architects of the new system had no idea, really, what they were going to build. They could not ask their users, because they were at war with them. So they made it up as they went along. Designs and plans fell out of meeting rooms onto the developers' desks.
+
+The developers were decent people. This was the era when even with modest training, you could learn to develop business software. We had as many women as men in the crew. I cannot fault the developers, nor the COBOL language, for the crap that emerged. This was a direct result of getting insatiable, arbitrary demands from the analysts.
+
+My job was to support the developers with source control and continuous builds, and to build the technical framework to make the applications run on TDS. Bull's computers were feeble imitations of IBM's mainframes, and likewise, TDS was a feeble imitation of IBM CICS, the dominant mainframe transaction processing system.
+
+Lurking like a bridge troll underneath the application was an Oracle database. I won't comment further except to say that it more or less worked, yet was both a major source of problems, and apparently, a major slice of the project cost. We could have done much better IMO.
+
+In those days the only plausible source control system was CVS. We did not use that. Instead we used shell scripts to check-in and check-out sources from a repository. The application consisted of hundreds of programs, each was either interactive (basically, one or more screen pages with logic), or batch.
+
+When you checked out a program you got all its related files. You could edit, compile, and test locally, quite quickly. When you checked your program back in, we saved the previous version (saving the differences, to save space), and stored the new one. We compiled everything, once per hour or so, to create a fresh testable version of the application for test users.
+
+As new programs got checked in, they got sent to the Bull system for test compilation. That produced error listings (the code trying things that worked on AIX yet not on the Bull). Our shell and awk scripts pulled these error reports back to the AIX, extracted the few lines of error message from 20-page listings, and passed them to the developers so they could fix things.
+
+Some of the developers (especially the older ones who had learned the Bull environment) just printed out the reports, then stacked them in heaps around their desks. These heaps grew higher and higher, eventually, forming walls behind which the developers hid.
+
+The test users marked changed programs "approved" when they were happy with them. To make this work we had developed our own issue tracking system, in COBOL. That was not hard, as these tools worked well and let us build applications rather quickly.
+
+When a program was approved, it was sent up to the Bull system for real this time. It was compiled, and from then on available to external test users.
+
+People noticed quite early that the AIX test environment was rather faster than the Bull. Out came the arguments about interactive sessions vs. transaction processing. "The Bull will scale better for hundreds of users," went the official line. No matter that even with a handful of users, it was already slower. They added more of that special mainframe memory, and upgraded to the largest CPU possible. Using the Bull was not negotiable.
+
+Our development environment was quite neat, I think. For developers, it all just worked. Of course I far prefer our modern git-based environments. Yet what we built showed the power of straight-forward UNIX shell scripting.
+
+We also cracked the TDS environment and got the application running on it. This was no simple job, mainly because the programs had gotten so large that they did not fit into memory. Like a lot of machines bypassed by history, real memory was larger than virtual memory. That is, TDS limited programs to ridiculously small sizes, while the actual system memory was much larger.
+
+You could even access the system memory from COBOL, just not portably. And we depended on making TDS and AIX look exactly the same from the point of view of developers. Which ended with me writing a memory manager in COBOL that managed system memory, swapping blocks of memory in and out of application space, behind the scenes. It very fast because the heavy work (copying memory) compiled down to fast machine code. If in COBOL you say "move these 30,000 bytes from A to B" that can be a single machine instruction. If you write a loop, moving 30,000 bytes one by one, it adds up to maybe a million instructions.
+
+No matter, we could not save the project. The developers went through death marches, the regional offices went on strike, managers left and were replaced. By the end of 1995 the client had stopped trying to blame Sema and our team for the failure. Everything we did worked. The project was postponed indefinitely, and I went off to find more constructive things to work on.
+
+++ Welcome to the Web
+
+In 1995, the entire World Wide Web fit into a single book, with one paragraph per website. In November 1995 I registered imatix.com and started to think about building an Internet business.
+
+I'd been working in my free time and weekends with my friend Pascal on web servers. The design was inspired by the server I'd built for that tour operator. You can handle a lot (a //lot//) of sessions in a single process, if you use what's called a "cooperative multithreading" model. This means each session does a little work and then gives control back to a central dispatcher.
+
+Threads must never block, and all I/O must be asynchronous, just as on the VAX with its AST calls. You don't need actual system threads. That's nice because real threads bring a lot of nasty, often fatal problems with them. We've learned by 2016 that sharing so-called "mutable" data between threads is a Really Bad Idea. In 1996 I'd less data for this, yet already knew that it was nice when a thread could work with global data without risk of stepping on other threads' toes.
+
+By December 1996 we released a working web server, which we called "Xitami." Xitami was one of the first free web servers to run on Windows. Microsoft's "personal web server" was crippleware, and people hated it. Xitami was easy to install, it was fast, and had no limits. You could, and people did, handle enough traffic to swamp a highest speed Internet connections.
+
+I once saw [https://slashdot.org/story/02/10/01/0220213/slashback-courseware-towers-drives a Slashdot article] about a guy who'd hooked 26 hard drives to his Windows 95 box. He had a web page showing the PC and [https://web.archive.org/web/20030206102300/http://fileserver.coleskingdom.com/ explaining how he'd done it]. Slashdot was one of the most popular geek news sites, and the name had become to mean, "kill a website through sheer volume of requests." He was running Xitami on this PC, and it didn't crash or slow down.
+
+Yet I'm not going to talk about Xitami. It was my first popular open source product. It won many awards and users absolutely loved it. Yet it made us no money and had no developer community, and got us no business. As I define "open source" today, it was a failure.
+
+Our real product, on which I wanted to build a business, was something quite different. I'd designed a "web transaction protocol" and implemented that in Xitami, together with some tools for building web forms. This gave us a crude yet working transaction processing system for the Internet.
+
+That is, by 1997 or so we were able to build usable web applications that could handle thousands of concurrent users on cheap hardware. HTML was really poor. Basic functionality such as "put the cursor on this input field so the user can fix an error" was missing. Yet it worked.
+
+In that company with the Bull TDS there was a separate, independent division building their own applications. They'd been searching for some way to provide access to remote users. They were well aware of the potential of the Internet, even if that mostly ran over dial-up modems. They took one look at our web framework (which I called "iMatix Studio") and asked when they could start using it.
+
+Studio wasn't trivial to use. We'd not spent any time looking at developer languages, and we had totally missed Python as a candidate. Java 1.0 was just released, unstable, slow, and unusable. We did not look at more esoteric languages, and I was firmly against C++ because it produced such fragile code. So, we developed in C, which is less than ideal for the grunt work of business applications.
+
+Still, it worked, and we slowly built up our framework. We lacked good code generation, so we built a generic code generator called GSL, which we still use today in the ZeroMQ community. We lacked a language for modeling the state machines and UIs we wanted to generate, so we first wrote our own structured data language, and then switched to XML by mid-1997.
+
+It was in 1998 that I decided to part ways with Sema. They paid me well, and they were decent people, yet they were consistently betting on the wrong side of history, and it became deeply troubling. The last straw for me was when my boss asked me to make a technical design for a nationwide insurance network.
+
+Our brief was to connect several thousand insurance agents in a network. They would log into a system, query insurance files, get quotes, log events and claims, etc. It was almost exactly the same problem as our old tour operator system, seven years down the line.
+
+So I made a design betting on the future. We'd build it as a transactional web application, and use a number of XML formats for document standardization. The framework would be Studio, using arbitrary developer languages. We'd run on a single large UNIX box, which we'd tested and shown capable of dealing with ten times more traffic than planned. We'd use an Oracle database (again, customer decision, not negotiable).
+
+Sema presented this design to the client, while simultaneously presenting a second design based on a client-server framework called PowerBuilder. At the time, at least in Belgium, PowerBuilder was fairly popular for such wide-area applications. Microsoft supported it and promoted it. It was expensive and produced a lot of money for vendors like Sema simply by giving them a slice of license income.
+
+The PowerBuilder user interface was also much richer than HTML, at the time. It was however a miserably nasty system to deploy. When you started your app every day, the first thing it would do is download updates to the client half. This could take five minutes, or it could take an hour. You could not do updates during the day. Users //had// to log out at night.
+
+Yet we were talking about a system that was to be developed gradually over a period of years, and was meant to last for decades. The goal was to define new industry standards, and to bring the insurance industry into the modern world.
+
+And my design was rejected on the grounds that it could never work, that dial-up was no basis for a serious application, and that the Internet was just a toy that would never come to anything.
+
+I shrugged, and went and started iMatix Corporation sprl. I started to plan, with my friend Julie, how to build a real business. It was all new to me, so we kept it small and modest. Sema kept asking to help save catastrophic projects, and I kept accepting. We needed income.
+
+We worked on a project for the Belgian railways. Again, a bet against history, with a massive distributed application running on VAX/VMS. No transaction processing with ACMS. No attempt to reduce costs. Instead, use a platform that was already dying. Compaq had just bought DEC, the producers of the VAX, and would slowly start killing it. I stayed only a few weeks, then made an excuse and left.
+
+We worked on a death march project for the Francophone school system. Once again, a bet against history, with production data on an IBM mainframe, and a nasty client-server product that depended on Windows NT servers in every school. Once again I proposed a web based architecture to solve the interminable woes of this over-complex architecture, and was asked to back off and stop being disruptive.
+
+It was in 1999 that Manpower International in Brussels asked me to help on a small project, which turned into one of the most widely-used and most successful web applications Manpower had (and perhaps has) ever built.
+
+++ UltraSource, The Hot Potato
+
+FYI, Manpower's business was to select and recruit staff, and then send these out on temporary work for clients. It is a business called "sourcing", and more specifically, "HR sourcing" that I got to learn in some detail.
+
+Manpower had a core IT strategy that was quite common at the time, in larger multinationals. That was to build a central information processing system, and then use that everywhere. For a company like Manpower, that meant using the same application for every customer, in every country.
+
+It was the same strategy that sold products like SAP, aka "liquid cement." It is a strategy that is especially seductive to managers trying to build a company through acquisition. Buy a firm somewhere, throw out their existing core IT systems, replace with whatever corporate standard the last CTO fell for.
+
+As a business strategy, it can work. Modern banks have relied on this because otherwise their separate acquisitions simply can't work together. Modern firms like Google, Microsoft, and Amazon each rely on their own global, shared infrastructure. Yet banks and Internet firms are special cases, where sending data around the organization is their core business, rather than a problem of profit & loss reporting.
+
+In the case of a firm like Manpower (as with that firm trying to move all its offices to a shiny new Bull mainframe application), it was a rather insane strategy. Manpower's competitors tended to grow by acquisition and then leave every business unit to do its own thing. That was far more organic, and cheaper, than trying to rationalize all their IT systems.
+
+When we arrived on the scene, Manpower International (which had the task of providing software applications to the whole world of Manpower companies) had tried and failed miserably to build a global sourcing application. We did not know this, of course. The problem, a classic hot potato project that no-one wanted to touch, had fallen back in the laps of a small team in Milwaukee.
+
+Some time later Milwaukee asked me to make a proposal and so I flew there to spend a week talking with a room of 20-30 key people. They were experienced, skeptical, and critical. I brought with me a small prototype of some core functionality, an order placement screen.
+
+It didn't happen overnight. Our contact in Brussels had spent some months funding us to make the demo, and prepping the room in Milwaukee. Her home office was Manpower Japan, and that company was having a hard time getting larger clients. Her vision was to build a //real// sourcing application that would solve these difficulties. She wanted, ideally, the Americans to pay for the work.
+
+When we started talking about large scale web applications, my heart leapt. Finally, a project that aligned with my vision for iMatix. And then the reply came, "sorry, company standard is Microsoft Windows, Microsft Transaction Server (MTS), and Microsoft SQL Server"
+
+Now Windows is just a box and our Studio software ran fine on it. Indeed it was on Windows that Xitami got the most love from users. By that time we were already running Linux heavily internally, for our SVN source control, our mail server, and so on. It was clear that Linux was the way forwards for servers. Yet Windows would make a fine interim step.
+
+MTS however, was a WTF? It was a poorly documented, fragile mess. From our first tests we found that it crashed if you smiled wrongly at it. It was unscriptable, so all administration had to happen via point and click menus. Applications would freeze randomly. It did not play well with SQL server, so we got deadlocks and timeouts. It was a black box with little visibility on what was going wrong.
+
+I argued all of this, and pleaded to use our own tools. The answer was no, no, no. So, we wrote the prototype in Visual Basic and then somewhat later we (myself and our Brussels manager) found myself explaining it to a roomful of people in Milwaukee.
+
+It seemed like a rather hostile room. One or two of the people were sympathetic. The rest seemed truly unhappy to be there. I didn't take it personally, and just continued with diagrams of architecture, the tools we were making, walk-throughs of the code, and so on.
+
+And a few days after we flew back to Brussels, word came that we'd gotten the project. Turns out, absolutely no-one wanted to touch this project except a few people in Milwaukee. This small core of 4-5 people had long experience with HR sourcing, and successes under their belts. They saw the potential in our proposal and they realized they could make it work.
+
+The foundation for a good project is: a competent client who knows the business and has power of decision; a full-stack team that can deal with the work, at all technical levels; and a technical platform that is both dependable and tractable.
+
+In the first real meeting we had with the core team, they showed us a large stack of designs and ideas. I looked at them, then made a counter-proposal. Let's take the prototype we have, I said, and improve it little by little. You make requests, we'll make changes, you test the results. How often can you make new releases, they asked us. Every day, if you want it, I replied. We agreed on two or three times per week.
+
+And so we worked, with three people taking our work, testing it, and coming back with new requests. We'd make ten or fifteen changes a day, test them, and push them to the test machine. We logged the work in a Jira issue tracker. Every now and then we'd have face-to-face meetings to work through difficult problems, to break them down into small pieces.
+
+Windows remained a real headache that we could not fix. Ironically the person who'd insisted on this left Manpower not long after we'd started, and no-one else cared. Yet it was too late and we were stuck on that. If I'd known how much leverage we had before we started, I'd have insisted on using our own tools.
+
+On top of Visual Basic and MTS, we built our own framework (iAF, for iMatix Application Framework), a powerful code generator that built web pages, object managers, and database layers automatically. It worked well and we used it in other projects. Yet it was always based on that shitty toy scripting language and that nasty imitation of a real transaction processor. And so it never gave us real value.
+
+This was perhaps the biggest mistake I ever made in my business. The lesson here is, when you are a technology company, use your own technology in your projects. Don't accept client requirements that sabotage your own vision and future. It isn't worth the short term gains.
+
+Much later I came to frame this more brutally as, "never build closed source, period."
+
+iAF used meta languages to describe the pieces of the application. Later I'd call this "model oriented programming." We defined a //presentation layer// consisting of screens, an //object layer// consisting of objects and views, and a //database layer// consisting of database tables and indexes.
+
+Here's a simple example, for working with currencies. The database layer defines the actual properties we store for a currency:
+
+[[code]]
+<table name = "currency" description = "Currency" >
+Currency lookup table.
+    <field name = "isocode"   domain = "currency">ISO currency code</field>
+    <field name = "name"      domain = "longname">Currency name</field>
+    <field name = "showcents" domain = "boolean">Show cents?</field>
+    <field                    domain = "audit"/>
+    <index name = "primary">
+        <field name = "isocode" />
+    </index>
+</table>
+[[/code]]
+
+We then specify an 'object' that inherits from the database table, and we add some flair (such as here, the name is mandatory when creating or updating a currency):
+
+[[code]]
+<object name = "currency">
+    <require>
+        <field name = "name" />
+    </require>
+</object>
+[[/code]]
+
+Behind the scenes, iAF bases that object on a 'default' object that looks like this (this is a standard model that the developer doesn't need to know about, or touch):
+
+[[code]]
+<class name = "default" default = "1" >
+    <!-- The create view is required by the object layer       -->
+    <view  name = "create"  read = "0" write = "1" delete = "0" />
+    <!-- The delete view is required by the object layer       -->
+    <view  name = "delete"  read = "0" write = "0" delete = "1" sameas = "create" />
+
+    <!-- These views are recommended but not obligatory        -->
+    <view  name = "detail"  read = "1" write = "1" delete = "1" sameas = "create"/>
+    <view  name = "summary" read = "1" write = "1" delete = "1" sameas = "create"/>
+    <query name = "detail"  view = "detail"  />
+    <query name = "summary" view = "summary" />
+
+    <state name = "object exists">
+        <view name = "detail" />
+    </state>
+</class>
+[[/code]]
+
+And then I describe how I want the object views to appear to the user. At this point I start mixing Visual Basic code with my model. The code generator includes my custom code in the generated result. Complex screens have thousands of lines of custom code. Simple ones like this, just a few:
+
+[[code]]
+<screen object = "currency" style = "select" alpha = "1" />
+<screen object = "currency" style = "list"   alpha = "1" />
+<screen object = "currency" style = "create" />
+<screen object = "currency" style = "detail" />
+
+<macro name = "currency_validate">
+<use object = "currency"/>
+<handler event = "on_accept" >
+    fld_currency_isocode = ucase (trim (Request.Form ("currency")))
+    <if condition = "fld_currency_isocode &lt;&gt; &quot;&quot;">
+    <fetch object = "currency" view = "summary">
+    <missing>
+    cur_message = "Please enter a valid currency code or select from the list"
+    cur_error   = "currency"
+    </missing>
+    </fetch>
+    </if>
+</handler>
+</macro>
+[[/code]]
+
+The application architecture isn't complex. It's 1999 and we're aiming for consistency and simplicity, not features. It is monolith built on a single database. There are no asynchronous updates to the web page, no AJAX. We use JavaScript for local validation and cosmetics, such as flagging an error input red, and putting the cursor there.
+
+What we built turned out to have some interesting aspects:
+
+* It was a large application, with a hundred database tables and five hundred screens. With our tools we were able to build new functionality rapidly.
+* It was slow to use because often it took lots of clicks to get to a certain place. We did not spend much time on creating fast paths or shortcuts.
+* Users loved the application.
+
+The thing was, users did not work 24/7 on the system. They used it for perhaps half-an-hour a day. Some users (especially inside Manpower) used it full time, yet they were happy too.
+
+The reason was simple in retrospect. This was an application meant for clients of Manpower, thousands and thousands of HR managers in random firms. The number one expense for Manpower, in previous projects, and the number one fear of users, was training and complexity. What we built was so consistent and simple that you could use it with zero training (of course, you had to know the business).
+
+For instance we used a list/detail design for working with data. You clicked on 'Currencies' and got a list of currencies. Click on a currency and you see its detail. Click 'Edit' and you can change it. And so on. Learn this design once, and it worked almost universally across the application.
+
+Obvious, and yet hand-built applications simply did not work like this.
+
+Occasional users cannot learn complex UIs. And when they get confused they ask for help, and that will overwhelm any support structure you can build, and be ruinously expensive. And //this// was the reason no-one wanted to take on the hot potato.
+
+The lesson here is a devious one, and that is that you often don't know what the real problem is until you get very close to it. We were lucky our approach fit Manpower's way of working.
+
+We eventually rolled the application out to Japan, the Netherlands, Germany, the UK, and the USA. This happened gradually, over years, without major stress. We built a translation tool that let local offices translate the screens. We added customizable order pages so that local offices could make orders as baroque as they wanted.
+
+The system wasn't perfect, in many ways. We had bugs here and there that only showed when the system got stressed. There was an order export process which pushed completed orders out to other applications for processing. This was long before we understood how to do messaging, so our designs were clumsy and not fully robust.
+
+Above all, MTS would panic and shutdown threads when too many users worked at once. There was no way to fix this. It left the database with dangling locks that ended up killing the entire system. We had to limit the number of users, and move to larger machines.
+
+Despite these stumbles, the application ("Ultrasource") became Manpower's first global web application, and ran for many years. It produced vast amounts of new business for our client, and gave iMatix a healthy income in ongoing maintenance fees.
+
+And then in the summer of 2000, I got an email from a Nigerian beer company (Nigerian Breweries, or NB) asking if we had any experience with electronic payments systems, and could I please read the attached documents.
+
+++ E-Payments in Lagos, Nigeria
+
+East Africa was my first home and I'd traveled many times to the continent, for family and work. Sema would send me on short trips to do UNIX trainings, help with EASY installations, and so on. I'd been to Burkina Faso, Togo, Rwanda, Angola.
+
+Either you love Africa or you hate it. There is no easy middle ground. Even stepping foot in Africa as a European is a political act, conscious or not. It took me many years to understand it as a continental prison filled with innocents, as I've written in my book Culture & Empire.
+
+So the prospect of a project in Nigeria was appealing. I read up on the place in Lonely Planet and a book called "The Most Dangerous Countries in the World," which ranked Nigeria just after Columbia. My mother pleaded with me to not go there.
+
+Not being a fearful person, I read the client's requirements, and started to work on a project proposal. It was an interesting case and I realized why they'd come to me. They used EASY for their accounting and sales. They had to extend that with some kind of a network that could carry payments to banks. We'd started to get experience connecting bizarre systems together, and building successful web applications.
+
+NB's IT manager had asked Sema, "who do you know who could possibly make this work?" and they had replied, "ask Hintjens, he's probably the guy you want."
+
+Let me explain what the problem was. NB was doing well. They dominated the market, and Nigeria was (and still is) a huge market for beer. The profit per bottle was low, yet sheer volume made up for that. NB was expanding, building new breweries across the country. They had powerful marketing and sales, and frankly, their beer was excellent.
+
+Two things struck me, when I first visited. First, the brewery was perfectly organized. The buildings were all in good state, the gardens neat and tidy, the production line modern and shiny. It was a striking contrast from a brewery I'd visited in Kinshasa some months before, where crates of broken bottles lay around randomly, where people seemed tired, and where a heavy feeling of tropical lassitude lay around the place. NB's facility hummed with positive energy.
+
+The second thing was it was run entirely by Nigerians with some other Africans. There was just one European, the financial director, or FD. Later, as the brewery upgraded its capacity, teams of eastern European engineers would fly in. And there was our team, as the project progressed. Yet in my first visit, I don't think I saw a single white face from leaving the airport to departure, two weeks later.
+
+The IT manager took good care of me. We visited Lagos, a massive and busy city filled with life, most evenings after work. I've spent a lot of time in Africa and was rapidly at home, no matter where we went. After a week of design discussions and meetings with other managers, I went back home to write up a detailed proposal. I can still remember my shock, in the airport departure lounge, to see white faces and feel, "how strange they look!" and then realize.
+
+Anyhow, back to the problem. Nigeria, at the end of the 20th century, was a huge and booming economy driven almost entirely by cash and favors. Much of the country's wealth came from oil, yet there was (and has been, in this part of Africa, for hundreds of years) a solid commercial middle class. Spend a day in Lagos and you see the sort of frenetic hustle that feels more like New York than Atlanta.
+
+And yet, as the FD of the brewery explained, there is no system of credit. A "long term" bank loan is 3 months. No credit cards, unless you're a foreigner in a foreign operated hotel. No checks. Few people have bank accounts, and when they do, it's for moving hard currency in and out. Salaries are paid in cash. Cars and houses are bought and sold in cash. There are no mortgages, no car financing plans.
+
+The brewery produces beer, which it puts into glass bottles. These go into crates of 12 or 24, which get stacked onto lorries. The lorries then take the beer to distributors. The smallest unit of sale, for the brewery, is one lorry load. The distributors then resell the beer to shops, clubs, bars.
+
+When a lorry loaded with beer leaves the brewery, the distributor has paid for the beer, the empties, and the crates. The lorries belong to the distributor or their transport firms. The brewery does not own and operate its own trucks.
+
+And the distributor has paid for the liquid beer, the glass bottles, and the plastic crates, in cash. One lorry of beer comes to, let's say, two large suitcases of cash in the highest denomination notes. The brewery staff count and check the money before the lorry leaves. The cash is then put into the treasury, a large room that is literally filled to the ceiling with notes, at times.
+
+When a lorry returns, the brewery counts and checks the crates and bottles, and the distributor gets repaid (in cash) for the value of the empties. Remember that this is rather more than the value of the liquid beer. This means the brewery is, at any time, holding a lot of cash simply as deposits. It can keep some of the deposited cash in a bank yet a lot must remain on-site.
+
+The backdrop to this successful business is a currency (the Naira) that continues to fall in value, so that the stack of paper needed to pay for one lorry keeps getting larger.
+
+Then, a culture of criminality that is pervasive and can be shocking to foreigners. We're used to trusting others around us, and we're shocked when someone steals a wallet, or a car, or a phone. In Nigeria, there is no trust. All business runs on the assumption that theft will happen if it can. Entire lorries of beer have disappeared, never to make it to the distributor.
+
+Then, a severe lack of technical infrastructure. In 2000 there was a fixed phone network that mostly worked, though only wealthy people and businesses had a phone. Electricity would fail several times a day, so everyone who could afford them had back-up generators. There were some good highways yet most roads were miserably bad, and jammed with traffic.
+
+Driving around Lagos was the fuel of nightmares. You'd see a flame ahead on the motorway, it was a burning truck tire that someone had left in the road. Why? To mark a hole large enough to fall through. People would carry extra fuel in their car boot (since fuel supplies were so sporadic). So if they were hit from behind, their car would explode. Taxis and scooters ("okadas") drove maniacally around pedestrians, goats, street vendors.
+
+After dark, there were roadblocks with armed police. I don't really know what they were looking for. We just greeted them, said we were from the brewery, and they waved us on. This happened so many dozens of times that I'd greet them with a huge smile, a handshake, and "shine shine bobo!" which is the slogan for NB's most popular beer, Star. They'd laugh and we'd drive on.
+
+I'm rambling. Back to money. The question was, how could we cut out the cash transactions at the brewery?
+
+After some thought, our solution was to have transactions happen at the bank side of things, rather than in cash on-site. So each time a distributor bought a truckload of beer, they'd transfer money from their account to the brewery's account. And each time they returned an empty truck, the deposit would flow in the opposite direction.
+
+It sounds simple and obvious enough. Yet bear in mind, we can't trust individual bank employees, nor do we have any kind of remote (web based?) banking system.
+
+Our first problem was to convince the banks to work with us. We learned quickly that a meeting for a certain day meant, "we'll arrive at some point during the day." Traffic jams could last several hours, even though from the brewery to Victoria Island, and the financial district, was just 15 minutes' drive.
+
+The banks at first thought we were somewhat insane. No-one had ever suggested electronic payments seriously. As thought experiments, sure. For real, live business use, let alone for considerable amounts of money, they were skeptical. So we explained the model, which was based on a secure messaging system running over pure old email.
+
+This took us some time to figure out. First we hooked into the accounting system, which was our old friend EASY. First we ran a continuous background job that caught orders flagged for electronic payment. This was simple to do. These orders were sent to our app, running as a web application on a local Windows server. A manager would get an email alert and click the URL to sign in. They'd review and approve the order. That would then go to their boss, who would also review and approve the order.
+
+Once approved, a payment instruction would go to the bank. This tells the bank the accounts to pay from, and to, the amount, and a reference. We signed and encrypted the payment message, then sent it to an email address that the bank used. There were five or six banks, as distributors used their own banks.
+
+Each bank ran a Windows server with the app on, but when they logged in they saw payments, rather than orders. The app would fetch email continuously: dial up to the ISP, log in to the POP3 account, fetch email, delete email from the POP3 account, wait for five minutes, and repeat. As payment instructions arrived they'd be loaded into the app database and be visible to the bank.
+
+We looked, in each bank, at integrating with their systems. That turned out to be infeasible. These systems were all different, and all bizarre, and the expected volume of orders was not so high (a dozen a day per bank).
+
+So we agreed that the bank staff would simply make the transfer by hand on their own systems and confirm it on our app, when done. This left scope for fraud yet no more than normal inside the bank. Banks could, and did, have their own internal approval systems for transactions above a certain size.
+
+Once the transfer was made, a payment confirmation would be sent back (again, by encrypted email) to the brewery. Our app would receive this, flag the order as paid, and tell EASY.
+
+EASY had no existing way to import such data, so I wrote a small tool that acted as a TELNET client, and could log into the application and push the right buttons. Sema were quite surprised when they realized how we'd done this. They were expecting NB to pay for work to make a new import program.
+
+Corinne (perhaps the fastest developer I've ever worked with in my life) and I designed the app and she did most of the development. Pascal helped with the backend, as he'd done for UltraSource. It ran nicely. By this time we knew our tools well, and had built other apps with them, like our own issue tracker, ChangeFlow.
+
+Somewhat to my surprise, we were able to deploy the system in test, and we started to expand it to other breweries (NB had seven or so, in different cities). The amount of skepticism was massive, both in banks and in the brewery itself. Distributors -- who suffered the most under the cash based system -- were enthusiastic. To test, we sent payment requests to banks, reconciled the responses, and checked that things didn't get lost. At the bank side, the responsible manager simply clicked "Done" without actually making a transfer.
+
+Dial-up in Nigeria was fragile. There are lots of failed attempts, busy lines, dropped lines. It might take half a day for messages to start getting through. If a driver had been waiting for their order to clear, they'd wait half a day. That happened with cash too, as it might take some time to assemble the needed stashes of notes. One thing you quickly learn in Africa: patience.
+
+Yet apart from that, messages did not often get lost. I learned that email is surprisingly robust, even though it has no delivery guarantees. We used a simple retry mechanism to resend messages if we didn't get a response within some timeout. We ignored duplicate requests and responses. And so on, the usual stuff.
+
+Lesson here is: you can do a lot with little, if you are creative.
+
+Then just a month or so before we were going to go live, Heineken bought NB (they were already a minority owner, then they bought more shares, to get a controlling stake). They stopped all investment in EASY and the electronic payments system and began to plan a SAP deployment. And that was that. We packed our bags, and went home.
+
+++ Building the Perfect Kiosk
+
+In 2003-2004 we rebuilt the delivery system for CBR's cement factory in Gent. This time we got the full project, down to the kiosks.
+
+We'd done a good job with the previous automation project, so CBR called us in to one of the earliest planning meetings for their new factory project. They drew a schema of all the pieces. We had, as before, one supplier for the kiosks, one for the loading bridge automation, one for the Unix application, etc.
+
+By this time CBR were talking to us (iMatix) directly, rather than Sema. In the meeting I stood up. "Last time, we had real difficulty integrating all these pieces," I told the managers. "So what do you suggest?" they asked me. I took the pen, and drew a large box around all the pieces except the loading bridge, which was out of our competence. "We'll do all these," I said. There was about two seconds' silence and then the project lead, who still adored us from the work we'd done, said "OK," and that was that.
+
+I did what I often did in those days, when starting a new project. I sat down and wrote a design spec.
+
+For once, and because we knew exactly what we had to make, and why, the design spec was almost perfect. My main goal was full off-site testability, for every piece of software and hardware, alone and together. I also wanted to make the kiosks completely fool proof. Plug and play and never break.
+
+I asked CBR what their budget was. We agreed on a budget for the software on the usual lines: days times rates equals total. For the hardware, we agreed on unlimited budget, with no profit for iMatix. This freed us to find the very best hardware. The kiosks turned out //very// expensive to build, yet considering the cost of failure, and the overall project cost (automating the deliveries for a major factory), this was easily justifiable.
+
+Julie and I designed the hardware by looking for all the smallest, most resistant pieces on the market. Sun-readable screens, dust-resistant printers, badge readers, PCs. We designed the casing and interior layout ourselves, and found a firm to build six metal housings. Julie found a paper supplier and got a palette of custom thermal paper produced.
+
+Let me tell the printer story as an example. We were discussing with CBR about the tickets the kiosk should print, size and type of printer. We agreed, thermal printers, no ink to smudge or replace. I asked if they had a preferred supplier, and they did. So we asked the supplier what kind of printers they had. The smallest was the kind you see in an airport, about 30cm high, 75cm deep and high.
+
+"It has to fit inside a small box. Got anything smaller?" I asked. I had made this sketch of the internals of a kiosk design, and the printer had to fit in the space of a small stack of paperbacks. "No," they replied. "I'll find another supplier on-line," I told them. "Good luck, it's impossible!" they replied, not entirely sweetly.
+
+We did finally find the right printer, tiny and fast, designed for fitting inside a kiosk. So the eventual kiosk was about 75% dedicated to holding paper, which was perfect. The kiosks could run a week without needing a refill.
+
+Lesson here is, don't take "impossible" as an answer. Everyone lies, not always deliberately. We just have our assumptions and ignorance and we believe we're telling the truth.
+
+Mato designed a multilayer Linux OS that booted off DHCP, and then fetched its application from the network and then connected to the server. The kiosks were plug-and-play: connect power and Ethernet, and they'd boot in about 10 seconds and show their welcome screen. Access control to admin functions on the kiosk was via special badges and PINs.
+
+Thierry and Pascal wrote a new dispatcher, and I designed XML messages that connected kiosks to this backend system. Jonathan and I wrote a new reliable messaging system (STEP) that talked to the central SAP system.
+
+Ewen and I built the kiosk application; I designed the twenty or so screens in black and green, using a large sci-fi font and movie-style computer graphics that were bold and easy to read even in direct sun. Ewen brought them to life, with his code talking to the dispatcher over the network, using a simple TCP/IP protocol.
+
+In total eleven people worked on this, in offices around the world. We tested each piece, and each kiosk separately, without setting foot in the factory. The client build kiosk housing, took our work, installed it, and it all ran first time.
+
+What else do you expect?
+
+There's [http://imatix.wdfiles.com/local--files/portfolio/CBR_Gent_2002_Review.pdf a review of the project] that I published rather later that gives more details.
+
+There were some good lessons here:
+
+* Build up trust with the client and sometimes they will reward you for it.
+* When you've paid for all the mistakes, you should know how to do it right the next time.
+* A good specification lets diverse people work together without confusion or conflict.
+* If you can test each piece alone, and you have reliable ways of putting them together, the whole should work.
+* Don't be afraid to charge the real cost.
+
+On the downside, the kiosks worked //so// well that the client never came back for support or maintenance. While this project made us money, it did not lead to any new business, and did not push my vision for iMatix forwards at all.
+
+In that sense, it was a total failure. It is ironic that a "successful" project can be a failure, while catastrophically bad projects can push you through to better things.
+
+I also learned that building a team just to have a team was wasteful. Employees take time to manage. I was becoming a middle manager, and not coding any more. We tried extremely hard to find new clients, and built several potential products:
+
+* A HR sourcing application ("Sourceflow") inspired by UltraSource. We rebuilt the whole core and UI and database. We'd made numerous apps using iAF by then, and Sourceflow was elegant and nice to use. We showed it to many large businesses and HR suppliers. Lesson learned: don't make stuff and then try to sell it unless you are growing an //existing// client base. Sourceflow went into the trash.
+
+* A plug-and-play kiosk design for factories, airports, carparks. In 2004, this was still a new thing. We had excellent software, and what I think was a nice hardware design. We did some sales work. No luck. Into the trash (luckily it was just a paper design). Lesson learned: breaking into markets you don't know is probaby impossible.
+
+* A group-chat-as-a-service application called SMS@. You created a "site" using the sms-at.com website, and then people could use it via their mobile phones. We deployed this in Belgium and sold it to TV stations, and events like Brussels Rollers (people subscribed via text message and got news back, about cancellations etc.) SMS@ was really neat and worked well. However we had to pay so much to the mobile phone operators (2,000 EUR/month per operator just to be connected), that we needed to charge the users per SMS. I wanted much cheaper text messages but the operators were pushing for premium messages. Lesson: mobile phone operators are crooks who steal billions, fifty cents at a time. I finally killed the product.
+
+In 2004, the IT industry in Belgium was still in crisis and though we spent a lot of effort and money on marketing and sales, we could not sustain it. We simply could not find new clients. Years of built-up cash reserves were draining away. One by one I fired my team, until it was just a skeleton crew (Fabio and myself) left.
+
+It was terribly sad to walk through our offices, where fifteen people had once worked, to see one or two people there. Yet without shutting down our projects and going through the pain of firing friends, iMatix would have gone bankrupt.
+
+Lesson: be aware of your expenditure and manage your losses. You can survive a long time with less income if you are in tight control of what you spend.
+
+Second lesson: it is no favor to pay people to do idle work. When you hire someone, tell yourself, and them, one day this will be over. Today I far prefer working with self-employed partners because that doesn't need to be stated, it's explicit.
+
+++ The Investment Bank
+
+In late 2004 as we wondered what was happening next, I got a timely phone call from JPMorganChase investment bank (JPMC) London to help design a new protocol. I had one white paper and benchmarks (100K pub-sub messages per second) to reach. The existing messaging layer could handle 10K messages per second, per server, and they ran a fan-out cluster of dozens of servers to reach the capacity they needed. So I wrote a prototype and demoed it, and we got the full contract.
+
+We migrated an existing trading system off a closed message bus that was costing eight million pounds a year. I did not know how much we were saving the business... and our contracts were meager. Our design was a messaging system, and an emulation layer that let existing apps work without changes.
+
+It was not an easy project. Hitting 10K messages per second was easy; we could do 50K in one thread quite easily. To hit 100K we had to rewrite the code to be multithreaded, and in those days it meant locks and semaphores.
+
+It took three major redesigns of the protocol to get something we were happy with. The full history of this is on GitHub: https://github.com/imatix/openamq. The first designs were based on reverse engineering JMS. The third was based on an abstract exchange-binding-queue model (EBQ) that came to me on a beach in Lisbon, our last holiday for some time.
+
+The nice thing about EBQ was that it defined how the server worked, formally. So your app could rely on this no matter who wrote the server. One day we met a team from RabbitMQ, who'd gotten the AMQP/0.6 spec and implemented it. It talked to OpenAMQ straight away. Nice! This is how protocol specs should be.
+
+JPMC put together a working group to turn that spec into a "real" standard, while we continued to push our stack into production. It was a terribly hard project and taught me, as if I didn't know, the miserable nastiness of multithreaded code in C.
+
+In 2005 my wife was pregnant and I was rushing to and from London, the bank putting us all under huge pressure to get it running. At the eight month, the baby was born, dead, and I had just a few days to grieve with her, before returning to work. I don't think we really ever recovered from that.
+
+AMQP was not ideal. There were many problems with it, which the working group should have fixed. Instead, it descended into politics and back-stabbing. JPMC (the Chair) and Red Hat were the worst. They'd made some kind of backroom deal where Red Hat got carte blanche to rip the spec to pieces and replace it with their own version, while we (iMatix) were trying to get the rights to our code, to launch a business.
+
+The Chair sat me down and said this: "Pieter, I want to make you a deal. If you remove your name as author of the spec, and let me tell people I wrote it, I'll get you the rights to OpenAMQ so you can start a business on it." The second part had been our agreement from the start, the first part seemed bizarre yet I was willing to make the deal, and we shook hands.
+
+Red Hat's AMQP (so called version 0.10) is an embarrassment. No, it's an offense. It was entirely incompatible, a shoddy spec based on documenting their code, with no attempt at clarity or interoperability. And the Chair pushed this through, bullying us to accept it as a necessary compromise. Red Hat had a team of twenty people writing code and editing the specification.
+
+Cisco eventually gave up and walked away from the project. My team gave up. We tried over and over to push AMQP towards technical improvements, proposing many RFCs for remote management, for higher-performance streaming, and so on. We did not get a single one of these into the spec.
+
+This wasn't cheap. The AMQP working group held its grand meetings in beautiful conference rooms in London, New York, San Diego. Dozens of people attended. We filled white board after white board with TODO items. Days passed, then we all went home again, and nothing of what we'd decided happened. Meanwhile my firm paid for our own travel and hotel costs out of pocket.
+
+My VCs eventually pulled out, saying they could not wait another six months for JPMC to assign us the copyrights. I'd made several trips to Palo Alto, & New York to get our business plans together. All into the trash.
+
+We did go live, dealing 150K messages per second, which was excellent. The project manager told us it was one of the easier projects he'd been on. I couldn't believe him.
+
+In retrospect, although the Chair caused huge amounts of stress and pain, he saved my firm and myself from bankruptcy. The meager contracts we got from JPMC were enough to let me rebuild iMatix as a far more interesting vehicle. The AMQP story is one that I like to complain about. Yet honestly, it was the start of something new and exciting.
+
+Lesson: sometimes success is your greatest problem, and sometimes bad events can have great outcomes.
+
+++ The Fight Against Software Patents
+
+Around the same time, I got involved in the FFII, fighting software patents in Europe. One of my motivations was that our SMS@ application had been attacked by a patent troll (AllIsBlue). I'd fought back by building an industry association, yet was the only firm willing to take a stance. In the end I shut the app and fired that team, too.
+
+Fighting software patents was easy at that stage. The FFII was in chaos after a long and hard fight in the European Parliament to defeat a law that would have let firms patent software, along the American model. For reasons that aren't exactly clear to me yet, I was elected president. Somewhat out of nowhere, I'd no such ambition.
+
+Two years I spent learning all about patents and copyrights, arguing with patent lawyers and lobbyists. But by far the worse arguments were from within the FFII. It was so incredibly hard to do anything. In the end I had to create a second NGO (ESOMA), in Brussels, with its own funding, to make things work.
+
+On the good side, I learned a **lot** and met many people. On the bad side, it cost me so much stress and money (I paid for all my considerable travel and time out of my own pocket) that I got burned out.
+
+Lesson: don't try to fix existing organizations. Start new ones. It's sad yet there we are.
+
+++ OpenAMQ, the First and the Fastest
+
+OpenAMQ was one of the best documented and built products I've ever touched. I'll explain a little how we made it. First, though, I'll explain why we killed it.
+
+In late 2009, the Chair and Red Hat sat down and decided, in a secret meeting, to rewrite the spec. The Chair described this in an email that has since vanished from public view, and sadly I can't show it. So you can trust me, or call me a liar. The problem they had was that the Qpid broker ran out of memory and crashed when consumers did not fetch data fast enough.
+
+Now, this is a beginner's problem in queuing. The correct solution is to throw away messages for slow consumers, if you are working with so-called "transient" data. If you need persistent data, you have to overflow to disk and let slow consumers catch up later.
+
+The Chair's solution was to entirely rewrite the AMQP spec. From scratch. By himself. After years and years of committee work. After years of investment by others in working code. Without asking anyone except Red Hat. And then, to force this spec through the working group using his usual tactics: bullying and lobbying.
+
+When we first saw this new draft spec we (the sane members of the WG) were flabbergasted. There was no clear reason //why//. Nowhere on the Internet will you find a clear argument that explains why the EBQ model was broken (and I'm not defending it). Just, "here is the new draft spec, take it or go home." The only rationale we got was something like, "we're not making progress with the current spec so I decided to take over editing."
+
+Some WG members leaped on board, impatient for a 1.0 release they could start to use. Others sat back and reached for popcorn. iMatix insisted on explanations, and we received none. It started to hit me that we were in a rigged game that we could not win. I wrote [http://www.imatix.com/articles:whats-wrong-with-amqp/ some long articles to plead for fixes to the process]. No effect. We started to wind down our AMQP work and prepared to exit.
+
+With the 1.0 release, the Red Hat vomit bucket was thrown out. We got approval from the WG to make an update to 0.9, so we did several hundred small fixes to the spec, and published that as 0.9.1. A spec for EBQ messaging, widely used, and dead on arrival. Seven years of work that took.
+
+At some point in 2012, on a blog post about AMQP 1.0 (which is a fine protocol that entirely missed the goals of that original AMQP whitepaper), the Chair accused me of having worked against AMQP, and claimed, once again that he and his "expert team" had written the original spec. Fuck that. Yes, I had a lot of excellent input from people. Yet the original AMQP spec, every line of it, until the committee got hold of it, was my work.
+
+I read those attacks, sitting in hospital with a sick baby, and so I pulled out my laptop and did what my Gaelic ancestors did when someone went just too far. [https://en.wikipedia.org/wiki/Flyting I wrote a poem]. Here it is, for your pleasure:
+
+Dear John, you called my name? And three times in a row? _
+Beware of what you call for. Well, heck, let's start this show.
+
+You once told me, Pieter, to be rich, stop writing code, _
+it's men who do the politics who pick up all the gold.
+
+Investment banker ethics, you said when we first met, _
+You proved that many times, I'll always owe a debt.
+
+You chased hard after money, you chased power, glory, fame. _
+So ten years' on we're here again, still playing at this game.
+
+But rich friends and their stooges won't make you a good designer, _
+New kitchen, car and flat TV won't make your work smell finer.
+
+Repeat the tired old promises, your dreams of endless glory, _
+because that's what they are, they're dreams, they're just a story.
+
+You built a massive castle, and raised up a higher wall _
+and invited the kings and the queens to a fancy costume ball.
+
+And outside, we raw peasants, we toiled in the mud, _
+and we built a real sprawling city, the future, my lord.
+
+Your fortress sits quite splendid, tricked out in purest gold _
+but inside those high walls it's empty, and brutal, and cold.
+
+The sycophantic circle jerk is awesome entertainment, _
+I'm breathless for the next reply, if you can maintain it.
+
+We get it, your deep hatred, your anger, and your fear, _
+these are normal emotions when your fate is crystal clear.
+
+We're the peasant zombies, the 99% unseen, _
+the dirty unwashed masses, the community, unclean.
+
+We argue and we bicker, and we have our little wars, _
+but we're the quiet storm that's breaking down your doors.
+
+The future may remember you, John, if we care at all, _
+a footnote to remind us: pride comes before a fall.
+
+And that was the last time I heard from the Chair. Thank god.
+
+++ Back to OpenAMQ
+
+DowJones & Company asked us to replace an existing expensive data distribution system with OpenAMQ. We extended the protocol with a "direct messaging" class that we offered the working group. This reduced the message envelope size to almost zero, and batched messages that went to the same endpoint. We were able to increase performance from 150K messages/second to 600 messages/second.
+
+This powered the DowJones Industrial Average for many years.
+
+When we released the AMQP/0.9.1 update, it took me about three hours to make OpenAMQ work with that revised protocol. Another day for testing and updating the documentation, and we released [http://openamq.org a new version].
+
+This was quick. Of course, we cheated, and I'll explain how and why.
+
+When Jonathan and I started thinking about how to build AMQP we looked at abstract protocol models and decided to write AMQP as a model. This means the protocol consisted of:
+
+* An XML file that could be compiled directly into code.
+* Hand-written supporting documentation.
+
+We used our code generator (GSL) to do the hard work. This takes models (XML files) and grinds them through code generators (scripts that turn the model into something else, like code or documentation).
+
+Code generation has a poor reputation yet this works exceedingly well. The model is simple, high-level and explicit. Look [https://github.com/imatix/openamq/blob/master/common/amq_queue.asl at this XML file and you'll see what I mean]. Our AMQP model has classes, methods, and fields. It lets you add rules and comments.
+
+More, it lets you structure the model into layers. We had a lower protocol layer (ASL) that dealt with connections, security, errors, and other aspects that all protocols need to deal with. Then we built AMQP as a set of classes on top of that. Each class is a separate file, easy to edit. Trivial to add, remove, extend classes.
+
+Push a button and you get a full written explanation of the protocol, the core of the written spec. Push another button and you get code in any language you need.
+
+I should have seen the warning signs when I handed the AMQP/0.6 (my final text) spec to the Chair, before we'd started assembling the working group. His first act was to pull all the XML files into a single huge XML file, and try to replace our code generation tools with XSL stylesheets.
+
+**If you can't envision a complex protocol as layers, you shouldn't be in the business of protocol design.**
+
+Killing OpenAMQ wasn't as hard as you'd imagine, even after the massive effort we'd spent in building it up. And I mean massive. Look at the openamq.org site, and you'll see tool after tool. We wrote a model language [http://www.openamq.org/doc:prog-pal, PAL], for testing, so we could write a huge test set. Here's a typical test script:
+
+[[code]]
+<pal script = "amq_pal_gen">
+  <session>
+    <queue_declare queue = "myqueue" />
+    <queue_bind queue = "myqueue" exchange = "myexchange" />
+    <basic_content size = "64000" message_id = "id-0001" />
+    <basic_publish exchange = "myexchange" routing_key = "myqueue" />
+    <basic_get queue = "myqueue" />
+    <basic_arrived>
+      <echo>Message '$message_id' came back to us</echo>
+    </basic_arrived>
+    <empty>
+        <echo>Message did not come back, this is bad!</echo>
+    </empty>
+  </session>
+</pal>
+[[/code]]
+
+This wasn't interpreted. It was compiled into code. Since our client API was in C, we generated C. It could generate any code. One test language, covering any number of client APIs. How cool is that? I wrote PAL up as an RFC and offered it to the working group. Red Hat and the Chair squashed that. I began to learn that a major problem with such groups is the ability for a few powerful individuals to keep competition away.
+
+Anyhow, killing this product, after years of work, wasn't so hard, because:
+
+* We didn't have a lot of paid clients, having gotten into the market too late.
+* We didn't have a successful community, as this was before I'd learned how to do that properly.
+* I realized AMQP was a lost cause and needed to stop bleeding money, my firm was going bankrupt.
+* I was utterly burned out and wanted to stop coding.
+
+The lessons here are numerous.
+
+**What is an open standard?**
+
+An "open standard" isn't enough to bet your business on. One of my spin-off projects was the [http://www.digistan.org/ Digital Standards Organization], and I came to understand what was needed to [http://www.digistan.org/open-standard:definition protect a standard] from predatory hijack. I [https://en.wikipedia.org/wiki/Open_standard#Digital_Standards_Organization_definition summarized the definition] of a "Free and Open Standard" as "a published specification that is immune to vendor capture at all stages in its life-cycle."
+
+What the "free" part means is, if someone hijacks your working group and starts to push the standard in hostile directions (as Red Hat did), can you fork the standard and continue? Does the license allow forking, yes or no? And secondly, does the license prohibit "dark forks," namely private versions of the standard?
+
+If either answer is "no," then you are at the mercy of others. And when there is money on the table, or even the promise of money, the predators will move in. The AMQP experience gave me a lot of material for my later book on psychopaths.
+
+Digistan's recommendation for standards was to use the GPLv3. We've used this in all [https://rfc.zeromq.org/ our ZeroMQ RFCs].
+
+The hard-earned lessons about capture also shaped my views of open source licenses, which is why today I recommend the Mozilla Public License v2 in general. It allows forks and prohibits dark forks, and is not tainted by Microsoft's long "viral" campaign against the GPLv3.
+
+**What is open source?**
+
+If we'd managed to build a thriving community around OpenAMQ, it would have survived. So the lesson here is simple: community before code. Today this is obvious to me. Eight years ago, it wasn't.
+
+**When do you give up?**
+
+In toxic projects like AMQP, when do you give up? I've tended to try to make things work until the bitter end. I'd stop only when there was no money left to invest, or literally at the edge of burnout. I've justified and rationalized this in different ways. Even now, I'll argue that bad projects (like bad relationships) are the only way to really learn.
+
+So, a book like The Psychopath Code is mostly based on personal experience. Years of accepting abusive situations either because I did not understand (most of the time), or because I decided to tough it out. Is this worth it?
+
+Simply walking away from a bad project can leave you damaged. It will eat at your professional confidence. You'll be afraid to try again. People will consider you a quitter (or, you'll think they do, which is more likely). Yet staying will destroy you. It'll empty your savings and leave you burned out.
+
+The best answer I've found is the one I explain in that book. Diagnose the situation, observe carefully, intervene to turn it around, terminate when you are healed.
+
+Please read that book, and consider how it applies to your professional life. Lessons like "keep a log." I did not enjoy the years of toxic relationships that taught me those lessons. Yet I calculate they were worth it, if the results can help others.
+
+**What's good software?**
+
+Good software is used by people to solve real problems. Good software saves people money, or makes them a profit. It can be buggy, incomplete, undocumented, slow. Yet it can also be good. You can always make good software //better// yet it's only worth doing when it's already good.
+
+OpenAMQ was perfect software by technical standards. It was by far the fastest AMQP broker ever. It did not crash. It had clustering and federation, remote administration, elegant logging. It was scriptable and embeddable and extensible. It was built using advanced tools that allowed one person to maintain a million lines of complex multithreaded C code.
+
+And yet though it ran well inside JPMC, their first goal, after deploying it, was to replace it with a Java stack. They (I speak broadly) hated the tools we used. They did not understand code generation. They felt that Java could easily be as fast. They accepted the "benchmarks" that Red Hat showed them, claiming millions of messages per second, without cynicism.
+
+And then in 2008, JPMC swallowed up Bear Stearns like a giant boa downing a crocodile. JPMC decided to switch to using Bear Stearns' rather better trading applications. The one we had ported to OpenAMQ was slated for closure. We'd received three years' maintenance, and then it was over.
+
+While in 2010 DowJones sold their indexes division (which used OpenAMQ) to the Chicago Mercantile Exchange, and they similarly closed down the applications that were our clients.
+
+Such shifts are common during mergers and acquisitions. They seem to have happened a lot more since 2008. In any case, by 2010 OpenAMQ was no longer "good software," and our vision of building a business on AMQP was clearly a rotten one.
+
+And so early in 2010 we resigned from the working group. There was some fallout, some blaming. I had criticized the process publicly. The Chair got his view of history into Wikipedia and blogs, painting me as the bad guy. That was unpleasant, yet I was so tired of the arguments that I left people to interpret the situation as they wished, and focused on other projects.
+
+Being, at that time, Wikidot.com and ZeroMQ.
+
+++ Wikidot.com
+
+In which I learn more about community. And beer. And why pizza with ketchup and mayo is a Good Thing.
+
+++ ZeroMQ
+
+In which I //finally// stop compromising my principles in exchange for the promise of money.
+
+Before Cisco had entirely given up, we worked with them to make a high performance multicast extension to AMQP. This eventually became the first version of ZeroMQ. Though what we have today is a totally different beast.
+
+++ Samsung, in Dallas and Seoul
+
+In which I'm accused of being a cocaine addict, and we get to learn the ins and outs of Korean cooking.
+
+++ The Ultimate Lessons
+
+So much to say. I think the core lessons are: be patient, don't give up, and always be learning. You can turn even the most crappy situation into valuable lessons. Teach them to others. Be happy with what you have yet always strive to improve things. Don't let people flatter you into playing //their// games. When things get weird, keep a log. Love and respect good people. Learn to keep the assholes at a distance. Don't get hung-up on the past. Be nice to people, even those trying to hurt you. Speak up when things are bad, and tell the truth. Trust your emotions yet check where they come from. Don't be afraid of taking risks, and learn to identify and manage risks. Solve one problem at a time. Be generous. Teach others whenever you can. Remember Sturgeon's Law.
+
+++ Finale
+
+Bringing the dead machines to life was my passion for decades. Via the FFII I learned that people are the real challenge. I began to move into community building, spending a while helping Wikidot.com build their community. Yet in the end, there is nothing quite like writing some code and seeing a light turn on, and turn off again.
+
+Thank you for reading all this. :-) If you are one of the people or firms that I talk about, and you take offense at what I wrote, sue me.
+
+Pieter Hintjens
+23 September 2016

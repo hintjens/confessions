@@ -1,0 +1,111 @@
+// kate: font Liberation Sans; font-size 16; syntax None; bom off; indent-mode none;
++ A Protocol For Dying
+
+I could probably write more, yet there are times for everything and after this, my attention will be focused on the most comfortable position for my bed, the schedule for pain killers, and the people around me.
+
+Yesterday I had twelve visitors, including my lovely young children. You'd think it's exhausting, yet the non-stop flow of friends and family was like being in a luxurious hot bath with an infinite supply of fresh water.
+
+I was a disconnected and lonely young man. Somewhat autistic, perhaps. I thought only of work, swimming, my pet cats, work. The notion that people could //enjoy// my company was alien to me. At least my work, I felt, had value. We wrote code generators in Cobol. I wrote a code editor that staff loved because it worked elegantly and ran on everything. I taught myself C and 8086 assembler and wrote shareware tools. The 1990's slowly happened.
+
+Over time I learned that if you chat with a stranger, in the course of any kind of interaction (like buying a hot dog, or groceries) they'll chat back with a beam of pleasure. Slowly, like a creeping addiction to coffee, this became my drug of choice.
+
+In time it became the basis, and then the goal of my work: to go to strange places and meet new people. I love the conferences because you don't need an excuse. Everyone there wants, and expects, to talk. I rarely talk about technical issues. Read the code, if you want that.
+
+And so I'm proud of my real work, which has been for decades, to talk with people, listen and exchange knowledge, and then synthesize this and share it on with others. Thousands of conversations across Europe, America, Africa, Asia. I'll take whatever credit people want to give me for being creative, brilliant, etc. Yet the models and theories I've shaped and documented are consistently drawn from real-life experience with other people.
+
+Thank you, my friends, for that. When I say "I love you" it's not some gesture. You literally kept me fed, professionally and intellectually.
+
+So I wanted to document one last model, which is how to die, given some upfront knowledge and time. I'm not going to write an RFC this time. :)
+
+++ How it Happened
+
+Technically, I have metastasis of bile duct cancer, in both lungs. Since February I've had this dry cough, and been increasingly tired and unfocused on work. In March my Father died and we rushed around arranging that. My cough took a back seat. On April 8 I went to my oncologist to say that I was really not well. She organized a rush CAT scan and blood tests.
+
+On 13 April, a horrific bronchoscopy and biopsies. On 15 April, a PET scan. On 16 April I was meant to drive to Eindhoven to keynote at NextBuild. Instead I went to the emergency room with explosive pains in my side, where they'd done the biopsies. I was checked in and put on antibiotics, which fixed the pain, and on 18 April my oncologist confirmed it was cancer. I'm still here, and my doctors are thinking what chemo to try on me. It is an exotic cancer in Europe with little solid data.
+
+What we do know is that cholangiocarcinoma does not respond well to chemotherapy. Further, that my cancer is aggressive and fast moving. Third, I've already some clusters in other parts of my body. All this is clear and solid data.
+
+So that day I told the world about it, and prepared to die.
+
+++ Talking to a Dying Person
+
+It can be horribly awkward to talk to a dying person (let's say "Bob"). Here are the main things the other person (let's say "Alice") should not say to Bob:
+
+* "Hang in there! You must have hope, you must //fight//!" It's safe to assume that Bob is fighting as hard as possible. And if not, that's entirely Bob's choice.
+
+* "This is so tragic, I'm so sad, please don't die!" Which my daughter said to me one time. I explained softly that you cannot argue with facts. Death is not an opinion. Being angry or sad at facts is a waste of time.
+
+* "You can beat this! You never know!" Which is Alice expressing her hope. False hope is not a medicine. A good chemotherapy drug, or a relaxing painkiller, //that's// medicine.
+
+* "There's this alternative cure people are talking about," Which gets the ban hammer from me, and happily I only got a few of those. Even if there was a miracle cure, the cost and stress (to others) of seeking it is such a //selfish// and disproportionate act. With, as we know, lottery-style chances of success. We live, we die.
+
+* "Read this chapter in the Bible, it'll help you." Which is both rude and offensive, as well as being clumsy and arrogant. If Bob wants religious advice he'll speak to his priest. And if not, just do not go there. It's another ban hammer offense.
+
+* Engage in slow questioning. This is passive-predatory, asking Bob to respond over and over to small, silly things like "did I wake you?" Bob is unlikely to be a mood for idle chitchat. He either wants people close to him, physically, or interesting stuff (see below).
+
+Above all, do not call and then cry on the phone. If you feel weepy, cut the phone, wait ten minutes, then call back. Tears are fine, yet for Bob, the threat of self-pity looms darker than anything. I've learned to master my emotions yet most Bobs will be vulnerable.
+
+Here are the things that Alice can talk about that will make Bob happy:
+
+* Stories of old adventures they had together. Remember that time? Oh boy, yes I do... it was //awesome//!
+
+* Clinical details. Bob, stuck in his bed, is probably obsessed by the rituals of care, the staff, the medicines, and above all, his disease. I'll come to Bob's duty to share, in a second.
+
+* Helping Bob with technical details. Sorting out a life is complex and needs many hands and minds.
+
+* "I bought your book," assuming Bob is an author like me. It may be flattery, or sincere, either way it'll make Bob smile.
+
+Above all, express no emotions except happiness, and don't give Bob new things to deal with.
+
+++ Bob's Duties
+
+It's not all Alice's work. Bob too has obligations under this protocol. They are, at least:
+
+* Be happy. This may sound trite yet it's essential. If you are going to be gloomy and depressed, Alice will be miserable every time she talks to you.
+
+* Obviously, put your affairs in order. I've been expecting death for years now, so had been making myself disposable wherever I could. For family, that is not possible. For work, yes, and over the years I've removed myself as a critical actor from the ZeroMQ community.
+
+* Remove all stress and cost that you can. For example Belgium permits euthanasia. I've already asked my doctors to prepare for that. (Not yet!, when it's time...) I've asked people to come say goodbye before I die, not after. No funeral. I'll give my remains to the university here, if they want them.
+
+* Be realistic. Hope is not medicine, as I explained. If you are going to negotiate with your doctors, let it be pragmatic and in everyone's interests. I've told mine they can try whatever experimental chemotherapy they wish to. It's data for them, and the least I can do for a system that's given me five+ years of extra life.
+
+* Assume the brutal worst. When my oncologist saw my scan she immediately called me and told me, in her opinion, it was cancer. In both lungs, all over the place. I put the phone down, and told the children. The next day I told their schools to expect the worst, then my lawyer, then my notary. Ten days later the biopsies confirmed it. That gave us ten more days of grieving and time to prepare.
+
+* Be honest and transparent with others. It takes time to grieve and it is //far// easier to process Bob's death when you can talk about it with Bob. There is no shame in dying, it is not a failure.
+
+++ Explaining to the Children
+
+My kids are twelve, nine, five. Tragic, etc. etc. Growing up without a father. It is a fact. They will grow up with me in their DNA, on YouTube as endless conference talks, and in writing.
+
+I've explained it to them slowly, and many times over the years, like this. One day, I will be gone. It may be long away, it may be soon. We all die, yes, even you little Gregor. It is part of life.
+
+Imagine you have a box of Lego, and you build a house, and you keep it. And you keep making new houses, and never breaking the old ones. What happens? "The box gets empty, Daddy." Good, yes. And can you make new houses then? "No, not really." So we're like a Lego houses, and when we die our pieces get broken up and put back in the box. We die, and new babies can be born. It is the wheel of life.
+
+But mostly I think seeing their parent happy and relaxed (not due to pain killers), and saying goodbye over weeks feels right. I am so grateful not to have died suddenly. I'm so grateful I won't lose my mind.
+
+And I've taught my children, to swim and bike and skate and shoot. To cook, to travel and to camp. To use technology without fear. At three, Gregor was on Minecraft, keyboard in left hand, mouse in right. At seven, Noemie learned to shoot a pistol. They speak several languages. They are confident and quick learners, like their dad.
+
+And everyone needs to learn what it means to die. It is a core part of being a full human, the embrace of one's mortality. We fight to live, of course. And when it's over, we embrace the end. I'm happy that I can teach this lesson to my children, it is one that I never had.
+
+++ Euthanasia
+
+I am, finally, so glad I never quit Belgium. This country allows for death on demand, for patients who are terminal or have a bad enough quality of life. It takes three doctors and a psychiatrist, in the second case, and four weeks' waiting period. In the first case, it takes one doctor's opinion.
+
+My dad chose this, and died on Easter Tuesday. Several of us his family were with him. It is a simple and peaceful process. One injection sent him to sleep, into a coma. The second stopped his heart. It was a good way to die, and though I didn't know I was sick then, one I already wanted.
+
+I'm shocked that in 2016 few countries allow this, and enforce the barbaric torture of decay and failure. It's especially relevant for cancer, which is a primary cause of death. Find a moment in your own jurisdiction, if it bans euthanasia, to lobby for the right to die in dignity.
+
+++ My Feelings on All This
+
+I've never been a fearful person. My last brush with death left me so casual about the whole concept of professional and social risk that I became [http://hintjens.com/blog:21 the predatory character] [http://allen.typed.com/blog/hintjens Allen Ding] so nicely describes. That calmed down after our Game of Thrones project ended. It was never really me, just the person I became to make things work, in that place and time.
+
+Having had years to prepare for this, and having seen a great many delicate plans come together over those years, leaves me deeply satisfied. Since 2011 I've become an expert pistol shot, taught myself to play piano (and composed many small pieces), seen my children grow into happy, bubbling characters, written three books, coached the ZeroMQ community into serene self-reliability. What more can a Bob ask for?
+
+The staff here are lovely. I've no complaints, only gratitude to all my friends for the years of pleasure you've given me, my drug, which kept me alive and driven.
+
+Thank you! :)
+
+++ Think of the Children
+
+Please use this article to add your stories. If you have them elsewhere, or you emailed me, copy/paste as a comment. Feel free to write in Dutch or French if that's your language. I'd really like a single place where my kids can come and read what other people say about their dad.
+

@@ -1,0 +1,93 @@
+// kate: font Liberation Sans; font-size 16; syntax None; bom off; indent-mode none;
++ The Life FAQ
+
+Who's the purpose of Life? Who's in charge? How much does it cost, and what colors does it come in? Today, I take all these and other Frequently Asked Questions about Life and answer them in a single easy-to-hate blog post.
+
++ Q: What's Life?
+
+Life is the absence of not-Life, much like Beer is the absence of everything except Beer. Put it another way, Life is exactly like a huge planet-wide party involving billions of people and trillions of other life forms, lasting so many years we needed to invent "zero" just to count them, and not just playing the best music and eating the best food, but making it up on the spot.
+
++ Q: What's the purpose of Life and why should I care?
+
+There are several competing theories about this. One popular theory is that you'd better care, otherwise raging demon spirits from an alternate dimension will descend upon you and rip you to shreds with their talons and fangs, whilst simultaneously giving you the power to heal immediately, so that the torture lasts a million years. A less dramatic theory is that Life has no purpose, and whether you care or not doesn't matter a bit, as Life doesn't give a demon's arse either way.
+
++ Q: What are the alternatives? Why is Life better?
+
+Again, there are many theories about this, and some of the most durable and profitable ones -- also called "Religions" -- have developed multiple values of "Life". A less profitable though more scientific view is that Life is binary. You either have it, or you do not. However, Religion eats cake and drinks wine, while Science chews dry crusts.
+
++ Q: This Life sounds great, how do I get one?
+
+Unfortunately, Life is not available for download. You can only get a Life by invitation from two existing Life owners. Also, you cannot reject the invitation. By the time you realize you have received a Life, it is too late to back out.
+
++ Q: How much does a Life cost?
+
+For something that everyone needs and is willing to pay anything for, the surprising answer is that life is free, technically, which is the best kind of free. Some have argued that the price of a Life is a Life, though these are ironically those who usually value Life the lowest.
+
++ Q: What colors does it come in?
+
+Frankly, mostly a shitty brown color, with periods of blue and bright red. However your Life will change colors depending on how you connect it to other Lives. Your Life's current color is often the best sign that you have connected it to the wrong, or the right people.
+
++ Q: Who invented Life? Who's in Charge?
+
+Some people claim that Life was invented by one or more space ghosts who rule the Universe with extraordinary jealousy, paranoia, and Machiavellian cunning. In this story, when things go right it's always thanks to the space ghosts, and when things go wrong, it's always your own fault. The space ghosts of history have no emotions except violent anger and suffocating love, are never wrong, and never say sorry. Happily, space ghosts are not real. We can safely state that no-one invented Life and no-one is in Charge. As I said, Life is a big party.
+
++ Q: How can I make money from Life? What's the business plan?
+
+You can make good money by projecting your charismatic psychopathic inner-self onto others in the form of space ghosts, or similar hoaxes, if you are that kind of algorithm. The alternative algorithm is to find ways to make your Life useful to others, at which point you can reap a little of that benefit.
+
++ Q: What's the license for Life? Is it open source?
+
+Life uses a viral no-attribution share-alike license. No-one has successfully written down the Life license yet, so we can't ask the Open Source Initiative whether it's a compatible license.
+
++ Q: How do I boot up my Life?
+
+Most Lives come with convenient Parent plugins (primary, and backup), which will run your Lives for you until you are just getting cocky enough to believe things can't crash. After 18 you can choose to borrow money to try to upgrade your Life, or go rent your Life to the Man in exchange for food and shelter.
+
++ Q: I don't like my Life, who can I complain to?
+
+You will find good company with the 75% of others who dislike their Lives too. Usually, if you let them complain to you, they'll tolerate your complaining back. Mutual complaining is the basis of much social interaction. Note however that no matter how much you complain, no-one else can fix your life except you.
+
++ Q: My Life is slow, and crashing, how do I fix it?
+
+That's an awfully good question. There is no single answer. It is true that Life does randomly crash, and we just have to get used to that. Generally poor performance may be easier to work on. You may be connected to other Lives in dysfunctional patterns -- if you can identify these, change them. Your hardware may have issues, especially if you are an older generation model, or you abuse your co-processors. Life does also catch viruses and other malware. Consider a regular checkup.
+
++ Q: My Life is lousy. Can I get an exchange or refund?
+
+No, this is not possible for technical reasons we can't explain here. Just trust us. And if anyone offers you a refund or exchange, watch out, they are crooks. They just want your money or your Life. In Life, if something or someone appears to be too good to be true, they inevitably are.
+
++ Q: I sat on my Life and bent it. How do I fix that?
+
+Above all, if your Life still works, leave it alone. Trying to fix a Life that isn't broken will often make it worse. Some Lives are better bent than straight.
+
++ Q: Why is Life so unreliable? It just doesn't work for me!
+
+This is just a FAQ, not a full guide. On the one hand, you are the proud owner of a unique Life, yours from the day you are born to the day you die. On the other hand, there are no instructions. You can learn a lot from watching other people mess up their Lives. However the very best way to make your Life more reliable and overall, enjoyable, is to mess up yourself and then recover quickly.
+
++ Q: I find Life kind of amateurish. Is there an Enterprise version?
+
+You can buy lots of upgrades, and some of these do make a difference. However ultimately your Life has a fixed period of validity and there is nothing you can do about that. The best way to get free upgrades for your Life is to ask nicely. You can also be a sociopath, and that works for some people, especially those who want Enterprise Life.
+
++ Q: Can I get someone to help me understand my Life?
+
+Again, this is but a humble FAQ and a profound understanding of Life is typically something you will get only when it's tragically, and irreparably late. Beware anyone claiming they can help you with your Life, as the vast majority of people barely have their own Lives under control.
+
++ Q: How do I contribute to Life? Where's the source code?
+
+The Life community welcomes all contributions. The standard approach is to find a second contributor of the opposite gender, and then use the fork and merge model, repeating as necessary.
+
++ Q: Without strong Intellectual Property Rights, surely no-one will invest in new life!
+
+Oh, just go away!
+
++ Q: What hardware do I need to run my Life on?
+
+Life is entirely self-hosting, so you cannot switch the hardware out for a different box. Make the most of the hardware you have. Though you can extend it, and some people make a good job of changing it, it is usually a bad idea to make changes once you're up and running.
+
++ Q: If I buy larger hardware, will it make my Life better?
+
+You will get more stares, though that will not make your Life run better, and indeed will usually mess it up permanently.
+
++ Q: My life and I always argue. What's the answer?
+
+Do you mean "wife"? Then stop trying to always be right. 42.
+
